@@ -1168,7 +1168,7 @@ const UI = {
     aboutText:"A product prototype for the Lingnan Culture digital experience platform. Scope: Guangzhou old town (Liwan & Yuexiu). Built to test one hypothesis — that international visitors need cultural interpretation, not another map.",
     credits:"Sources & credits",
     creditsText:"Cultural content drafted by the project content team and reviewed by a native English editor; terminology follows our locked glossary. Watercolor illustrations were supplied by the project owner and are embedded in this prototype.",
-    version:"Prototype v3.1 · 2026-10-26",
+    version:"Prototype v3.2 · 2026-11-04",
     whatsNew:"What’s new in v3.1",
     comingSoon:"is planned for V2. English and 中文 are live now.",
     saved:"Saved", removed:"Removed",
@@ -1800,61 +1800,7 @@ const STORIES = [
    ① name ② one-liner ③ why it matters ④ what to look at ⑤ confusing
    ⑥ context ⑦ experience ⑧ visitor info ⑨ sources & next stop        */
 const PLACES = [
-{
-  id:"chen-clan", en:"Chen Clan Ancestral Hall", zh:"陈家祠", district:"liwan", cat:"museum",
-  art:"roof", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏯", x:40, y:29, time:"45–60 min", rating:5, booking:false,
-  one:{ en:"An 1894 ancestral hall and study hostel for 72 branches of one surname — now a museum of Cantonese craft.",
-        zh:"1894 年建成的合族祠书院，由陈姓 72 房合建，今为广东民间工艺博物馆。" },
-  why:{ en:"It is the single best place to understand how a Cantonese family worked: education, lineage, money and face, all in one building. It also happens to hold the densest surviving collection of Cantonese decorative craft — wood, brick, stone, lime and ceramic — on its own walls.",
-        zh:"想理解岭南家族怎么运转，这里是最好的地方：教育、宗族、财力与脸面，全在一栋楼里。同时它的墙上还保存着最密集的广府装饰工艺——木雕、砖雕、石雕、灰塑与陶塑。" },
-  look:[
-    { t:{en:"The roof ridge",zh:"屋脊"}, d:{en:"27 metres of ceramic figures: opera scenes, generals, fruit, bats. Read left to right like a comic strip.",zh:"27 米长的陶塑人物：戏文、武将、瓜果、蝙蝠。像连环画一样从左读到右。"} },
-    { t:{en:"Wok-ear gables",zh:"镬耳墙"}, d:{en:"The curved side walls. They were both a firebreak and proof the family had produced scholars.",zh:"两侧的曲线山墙，既是防火隔断，也是家族出过功名的证明。"} },
-    { t:{en:"The screen doors and the light courts",zh:"屏门与天井"}, d:{en:"Seven courtyards arranged so that air and light move through the whole plan.",zh:"七个庭院串起来，让风与光贯穿整个平面。"} },
-    { t:{en:"Brick carving on the entrance",zh:"入口砖雕"}, d:{en:"Carved grey brick, worked to look like painting. Look for the depth — some scenes are six layers in.",zh:"青砖上刻出的画面，讲究的是层次——有些场景深达六层。"} }
-  ],
-  confuse:[
-    { en:"It is called a hall, and it looks like a temple, but no worship happens here. It is a lineage association building with a school attached.",
-      zh:"它叫「祠」，也长得很像庙，但这里不做法事。它是宗族议事场所，附带学堂。" },
-    { en:"Some figures on the roof are opera characters you have not met yet. That is fine — the point is that a passer-by in 1894 could read them from the street.",
-      zh:"屋脊上有些人物来自你还没接触过的戏文。没关系——重点是 1894 年路过的人，站在街上就看得懂。" }
-  ],
-  context:{ en:"Cantonese families pooled money by surname, not by household. A hall like this let a scattered lineage act as one body: it housed students sitting the imperial exams, settled disputes, and stored the genealogy. The decoration was the public annual report.",
-            zh:"岭南宗族按姓氏而非按户集资。这样的祠堂让分散的族人能作为一个整体行动：接待应考子弟、调解纠纷、存放族谱。装饰就是它的公开年报。" },
-  exp:[
-    {en:"Cantonese craft galleries (porcelain, embroidery, ivory-substitute carving)",zh:"广东民间工艺展厅（广彩、刺绣、牙雕替代材料作品）"},
-    {en:"Lion dance and folk performances in the forecourt on holidays",zh:"节假日前庭的醒狮与民俗表演"},
-    {en:"A short film on restoration work, with English subtitles",zh:"修复工作的短片，带英文字幕"}
-  ],
-  info:{
-    address:{en:"34 Enlong Lane, Zhongshan 7th Road, Liwan", zh:"荔湾区中山七路恩龙里 34 号"},
-    hours:{en:"09:00–17:00, closed Mondays", zh:"09:00–17:00，周一闭馆"},
-    verified:{en:"Oct 2026", zh:"2026 年 10 月"},
-    ticket:{en:"¥10 (passport accepted at the gate)", zh:"10 元（可凭护照购票）"},
-    transport:{en:"Metro 1 / 8 → Chen Clan Academy station, exit D, 2 min walk", zh:"地铁 1 / 8 号线陈家祠站 D 出口，步行 2 分钟"}
-  },
-  related:["chen-clan","lion-dance","guangfu-architecture"],
-  next:{ en:"8 min walk north-east to Xiguan Mansion, then tea on Shangxiajiu Road.", zh:"向东北步行 8 分钟到西关大屋，再去上下九喝茶。" },
-  source:{ en:"Content: project content team field notes, Oct 2026. English reviewed by a native editor. Illustrations: original artwork by the project team.",
-           zh:"内容：项目内容团队实地记录，2026 年 10 月。英文经母语编辑审校。插画：本项目原创。" },
-  onsite:[
-    { prompt:{en:"Look up.",zh:"抬头看。"},
-      look:{en:"You are standing in front of the entrance. Above the door is the busiest part of the whole building.",zh:"你站在正门前。整栋建筑最热闹的部分，就在门的上方。"},
-      q:{en:"Why are there so many figures on the roof?",zh:"屋顶上为什么有这么多人物？"},
-      a:{en:"Those are ceramic figures made in the Shiwanzhao kilns and assembled on site. They show opera scenes and auspicious symbols. In 1894 the roof was the cheapest place to advertise: a passer-by in the street could read the family’s taste, literacy and wealth without ever coming inside.",
-         zh:"这些是石湾窑烧制、现场装配的陶塑。内容是戏文与吉祥图案。1894 年，屋顶是最便宜的广告位：街上路过的人不用进门，就能读出这一族的品味、教养与财力。"} },
-    { prompt:{en:"Look at the side walls.",zh:"看两侧的墙。"},
-      look:{en:"The walls curve up at both ends like the handle of a wok.",zh:"两侧的墙在两端向上翘起，像锅耳。"},
-      q:{en:"What is that shape for?",zh:"这个形状是做什么的？"},
-      a:{en:"It is called a wok-ear gable. Practically it is a firebreak: if a neighbour burns, the curved brick wall slows the fire. Socially it was a rank marker — families who had produced scholars were permitted to build them, so the silhouette itself said “we have educated men”.",
-         zh:"这叫镬耳墙。实际作用是防火：邻家失火时，曲线砖墙能减缓火势。社会意义上是等级标志——出过功名的家族才被允许这样建，所以光是轮廓就在说「我们家有读书人」。"} },
-    { prompt:{en:"Walk through to the second courtyard.",zh:"走到第二个庭院。"},
-      look:{en:"Notice the air. It is cooler than the street, with no air conditioning.",zh:"注意空气。没有空调，但比街上凉。"},
-      q:{en:"How does this building stay cool?",zh:"这栋建筑是怎么保持凉爽的？"},
-      a:{en:"Courtyards, high ceilings and deep eaves. Hot air rises out of the open courts and pulls cooler air in through the rooms — a vertical ventilation system that also gives every room daylight. Architecture here is climate engineering before it is decoration.",
-         zh:"靠天井、高厅与深檐。热空气从敞开的庭院上升，把凉空气从房间抽进来——一套垂直通风系统，同时还让每个房间都有采光。在这里，建筑首先是气候工程，其次才是装饰。"} }
-  ]
-},
+
 {
   id:"xiguan-house", en:"Xiguan Mansion", zh:"西关大屋", district:"liwan", cat:"heritage",
   art:"mansion", hue:["#8A7A5E","#C9AE7E","#4C4132"], em:"🚪", x:25, y:57, time:"30–40 min", rating:4, booking:false,
@@ -1890,7 +1836,7 @@ const PLACES = [
   },
   related:["xiguan-house","guangfu-architecture","porcelain"],
   next:{ en:"4 min walk to Liwan Museum, which explains the same house in drawings and models.", zh:"步行 4 分钟到荔湾博物馆，那里用图纸和模型解释了同一类房子。" },
-  source:{ en:"Content: project content team field notes, Oct 2026. English reviewed by a native editor.", zh:"内容：项目内容团队实地记录，2026 年 10 月。英文经母语编辑审校。" },
+  source:{ en:"Content: Liwan District government site, “Xiguan Mansion: A Gem of Lingnan Residential Architecture”; Guangdong Literature and History Network, “Xiguan Mansions and Xiguan Culture”.", zh:"内容：广州市荔湾区政府官网《西关大屋——岭南居民建筑的瑰宝》；广东文史网《西关大屋与西关文化》。" },
   onsite:[
     { prompt:{en:"Stand at the doorway.",zh:"站在门口。"},
       look:{en:"There are three separate doors in a row before you reach the hall.",zh:"在进入厅堂之前，你要经过三道依次排列的门。"},
@@ -1904,55 +1850,7 @@ const PLACES = [
          zh:"否则房间就会又暗又潮。天井做得足够小，雨水很快排走，却能为进深很大的平面带来日光、把热空气抽走，还让一家人在屋里种植物。在这种气候里，一方天井比一整片屋顶更有用。"} }
   ]
 },
-{
-  id:"liwan-museum", en:"Liwan Museum", zh:"荔湾博物馆", district:"liwan", cat:"museum",
-  art:"vase", hue:["#2F5D8C","#C0392B","#E8DCC0"], em:"🏺", x:28, y:67, time:"40–50 min", rating:5, booking:false,
-  one:{ en:"A small district museum in a 1920s merchant villa, best for understanding how Xiguan lived, celebrated and traded.",
-        zh:"设于 1920 年代商人别墅内的区级博物馆，理解西关的生活、节庆与贸易，从这里入手最好。" },
-  why:{ en:"Because it explains the everyday: wedding customs, festival food, the export porcelain trade and the lion dance’s place in street life. If Chen Clan Hall answers “how did the family think”, this answers “how did the household live”.",
-        zh:"因为它讲的是日常：婚俗、节令食品、外销瓷器贸易，以及醒狮在街头生活中的位置。陈家祠回答「家族怎么想」，这里回答「家庭怎么过」。" },
-  look:[
-    { t:{en:"Export porcelain and 广彩",zh:"外销瓷与广彩"}, d:{en:"Vessels painted in Guangzhou for foreign orders, some carrying European coats of arms.",zh:"在广州上彩、面向外销的瓷器，有些还画着欧洲家族徽章。"} },
-    { t:{en:"The villa itself",zh:"别墅本身"}, d:{en:"A 1920s house with a garden courtyard — a gentler, later version of the Xiguan mansion.",zh:"1920 年代的宅邸与花园天井——西关大屋较晚、较柔和的一个版本。"} },
-    { t:{en:"Lion dance head and drum",zh:"醒狮狮头与鼓"}, d:{en:"A southern lion up close, with the bamboo frame and paper layers visible.",zh:"近距离看南狮：竹篾骨架与纸层层可见。"} },
-    { t:{en:"Festival and wedding displays",zh:"节令与婚俗陈列"}, d:{en:"What a Cantonese wedding required, and why the food mattered.",zh:"广府婚礼需要什么，以及为什么那些食物重要。"} }
-  ],
-  confuse:[
-    { en:"It is a district museum, not a national one, so the labels are simpler and the collection is local. That is the advantage: everything here came from these streets.",
-      zh:"它是区级博物馆，不是国家级，所以说明文字更简单、藏品更本地。这正是优点：这里的每件东西都来自这几条街。" },
-    { en:"Some displays are only in Chinese. The app’s culture pages cover the same ground in English.",
-      zh:"部分展签只有中文。App 的文化页用英文讲了同样的内容。" }
-  ],
-  context:{ en:"Liwan was where Guangzhou’s export trade met its craft workshops. The museum sits inside a merchant villa because the district’s story is a merchant story: money from trade, spent on houses, porcelain, opera and festivals.",
-            zh:"荔湾是广州外销贸易与手工作坊相遇的地方。博物馆设在一栋商人别墅里，因为这个区的故事本就是商人的故事：贸易赚来的钱，花在宅院、瓷器、戏曲和节庆上。" },
-  exp:[
-    {en:"Hands-on 广彩 painting workshop (booking required, weekends)",zh:"广彩绘制体验（周末需预约）"},
-    {en:"English-language leaflet at the entrance",zh:"入口处可领取英文导览"},
-    {en:"Lion dance demonstrations on festival days",zh:"节庆日的醒狮表演"}
-  ],
-  info:{
-    address:{en:"Inside Liwan Lake Park, Liwan", zh:"荔湾区荔湾湖公园内"},
-    hours:{en:"09:00–17:00, closed Mondays", zh:"09:00–17:00，周一闭馆"},
-    verified:{en:"Oct 2026", zh:"2026 年 10 月"},
-    ticket:{en:"Free with ID or passport", zh:"凭证件免费"},
-    transport:{en:"Metro 5 → Zhongshan 8th Road, exit B, 10 min walk", zh:"地铁 5 号线中山八站 B 出口，步行 10 分钟"}
-  },
-  related:["porcelain","lion-dance","xiguan-house"],
-  next:{ en:"6 min walk to Yongqingfang for craft studios and the restored arcade lanes.", zh:"步行 6 分钟到永庆坊，看手工艺工作室与修复后的骑楼街巷。" },
-  source:{ en:"Content: project content team field notes, Oct 2026.", zh:"内容：项目内容团队实地记录，2026 年 10 月。" },
-  onsite:[
-    { prompt:{en:"Find the porcelain case.",zh:"找到瓷器展柜。"},
-      look:{en:"Look at the middle of one plate: there is often a coat of arms or a monogram that is clearly European.",zh:"看某只盘子的中央：常有一个明显属于欧洲的徽章或字母组合。"},
-      q:{en:"Why is a European crest on a Chinese plate?",zh:"中国盘子上为什么会有欧洲徽章？"},
-      a:{en:"Because the customer ordered it that way. Workshops in Guangzhou bought plain white porcelain from Jingdezhen and painted it to order — colours, borders and family crests chosen by the buyer in Europe. It is export design, two hundred years before the word localisation existed.",
-         zh:"因为客户就是这么订的。广州的作坊从景德镇买素白瓷，再按订单上彩：颜色、边饰、家族徽章都由欧洲买家指定。这是外销设计——比「本地化」这个词早了两百年。"} },
-    { prompt:{en:"Stand in front of the lion head.",zh:"站到狮头前面。"},
-      look:{en:"Up close, the lion is a bamboo frame covered in paper and painted — light enough for one dancer to wear overhead.",zh:"近距离看，狮头是竹篾骨架糊纸彩绘——轻到一名舞者能举过头顶。"},
-      q:{en:"Why is it built so light?",zh:"为什么要做得这么轻？"},
-      a:{en:"Because the lion is a dancer. The performer holds the head above his own head, jumps, climbs and rolls, sometimes on high poles. The frame has to be strong enough to survive that and light enough for one person to control it — which is why it is bamboo, not wood.",
-         zh:"因为狮子是舞出来的。舞者要把狮头举过头顶，跳跃、上桩、翻滚，有时还要在高桩上动作。骨架既要在这些动作里撑得住，又要轻到一个人能操控——所以用竹，不用木。"} }
-  ]
-},
+
 {
   id:"yongqingfang", en:"Yongqingfang", zh:"永庆坊", district:"liwan", cat:"district",
   art:"arcade", hue:["#B5843F","#E2C892","#6B4A22"], em:"🏮", x:34, y:61, time:"60–90 min", rating:5, booking:false,
@@ -2032,12 +1930,12 @@ const PLACES = [
     address:{en:"Shangxiajiu / Di Shifu area, Liwan", zh:"荔湾区上下九、第十甫一带"},
     hours:{en:"07:00–14:00 for morning tea, some until 21:00", zh:"早茶 07:00–14:00，部分店营业至 21:00"},
     verified:{en:"Oct 2026", zh:"2026 年 10 月"},
-    ticket:{en:"About ¥50–80 per person", zh:"人均约 50–80 元"},
+    ticket:{en:"Most tea houses do not take reservations; walk in", zh:"一般早茶楼不需要预约，直接到店"},
     transport:{en:"Metro 1 → Changshou Road, exit D, 3 min walk", zh:"地铁 1 号线长寿路站 D 出口，步行 3 分钟"}
   },
   related:["morning-tea","old-shops","qilou"],
   next:{ en:"Walk 5 min along the arcade to Shangxiajiu pedestrian street.", zh:"沿骑楼步行 5 分钟到上下九步行街。" },
-  source:{ en:"Content: project content team field notes, Oct 2026. Prices verified Oct 2026.", zh:"内容：项目内容团队实地记录，2026 年 10 月。价格核实于 2026 年 10 月。" },
+  source:{ en:"Content: project team field notes; reference books: Chen Li, One Pot, Two Dim Sum; Sheng Hui, The Cantonese Table.", zh:"内容：项目团队实地整理；核心参考：陈莉《一盅两件——广式早茶》、盛慧《粤菜记》；老字号茶楼官网、大众点评、美团。" },
   onsite:[
     { prompt:{en:"Sit down and watch the table for two minutes.",zh:"坐下，观察这张桌子两分钟。"},
       look:{en:"Someone turns the teapot and fills every cup except their own. Other people tap two fingers on the table.",zh:"有人转着茶壶，给所有人倒茶，最后才轮到自己。其他人用两指敲桌面。"},
@@ -2051,56 +1949,7 @@ const PLACES = [
          zh:"因为坐下来才是目的。在商贸城市里，信息是在桌边流动的：一桩生意、一个家庭决定、一次重聚。催客人的茶楼，等于没做好本职工作——给人一个待得住的地方。"} }
   ]
 },
-{
-  id:"opera-museum", en:"Cantonese Opera Art Museum", zh:"粤剧艺术博物馆", district:"liwan", cat:"venue",
-  art:"opera", hue:["#6E2B4F","#D2604E","#2E1B2A"], em:"🎭", x:26, y:73, time:"45–60 min", rating:5, booking:false,
-  one:{ en:"A garden museum on the old canal with a working stage, costume collections and free performances.",
-        zh:"坐落于旧涌边的园林式博物馆，有在用戏台、戏服藏品与免费演出。" },
-  why:{ en:"It is the only place in the city where you can see the full system in one visit: the costumes, the notation, the instruments, and then an actual performance on a traditional stage. Seeing it performed is what makes the gestures readable.",
-        zh:"这是全城唯一能一次看完整个系统的地方：戏服、工尺谱、乐器，然后是传统戏台上的真实演出。看过演出，那些程式才读得懂。" },
-  look:[
-    { t:{en:"The embroidered costumes",zh:"戏服刺绣"}, d:{en:"Look at the density and the gold thread. A single robe can take months.",zh:"看密度与金线。一件戏服可能要做几个月。"} },
-    { t:{en:"The stage and its acoustics",zh:"戏台与声学"}, d:{en:"A traditional stage with a hollow soundboard underneath; no microphones needed.",zh:"传统戏台下方有共鸣腔，不需要麦克风。"} },
-    { t:{en:"Gongche notation",zh:"工尺谱"}, d:{en:"The traditional notation still used by the musicians you will hear.",zh:"乐师至今仍在使用的传统记谱法。"} },
-    { t:{en:"The garden itself",zh:"园林本身"}, d:{en:"Lingnan garden layout — small, layered, water on one side of the whole site.",zh:"岭南园林布局：小、层叠，全园一侧临水。"} }
-  ],
-  confuse:[
-    { en:"Performance times change weekly and are not always listed in English. Ask at the desk when you arrive.",
-      zh:"演出时间每周调整，不一定有英文公告。到馆时问一下前台。" },
-    { en:"The singing is loud and the percussion is louder. That is the intended experience, not bad sound engineering.",
-      zh:"唱腔很响，锣鼓更响。这是它本来的样子，不是音响没调好。" }
-  ],
-  context:{ en:"Cantonese opera grew up around the tea houses of this district, and its amateur clubs (私伙局) still meet in parks nearby. The museum sits on the canal because this was the theatre quarter — the building is a restoration of that geography, not a random placement.",
-            zh:"粤剧是在这一带的茶楼周边长起来的，至今附近公园仍有私伙局开唱。博物馆建在涌边，因为这里本就是戏班聚集区——建筑是在复原这个地理关系，而不是随便选址。" },
-  exp:[
-    {en:"Free short performances on the garden stage (afternoons)",zh:"园林戏台下午的免费折子戏"},
-    {en:"Costume and makeup displays with English captions",zh:"戏服与化妆陈列，配英文说明"},
-    {en:"Weekend amateur 私伙局 sessions in the surrounding park",zh:"周末周边公园的私伙局"},
-    {en:"Tea service on the upper floor overlooking the stage",zh:"楼上临戏台的茶座"}
-  ],
-  info:{
-    address:{en:"Enning Road, by the Lizhiwan Canal, Liwan", zh:"荔湾区恩宁路，荔枝湾涌边"},
-    hours:{en:"09:00–17:00, closed Mondays; performances usually 14:00–16:00", zh:"09:00–17:00，周一闭馆；演出通常 14:00–16:00"},
-    verified:{en:"Oct 2026", zh:"2026 年 10 月"},
-    ticket:{en:"Free with ID or passport", zh:"凭证件免费"},
-    transport:{en:"Metro 1 → Changshou Road, exit D, 8 min walk", zh:"地铁 1 号线长寿路站 D 出口，步行 8 分钟"}
-  },
-  related:["cantonese-opera","yuequ-parks","qilou"],
-  next:{ en:"Walk the canal west for 6 min to Liwan Museum, or east to Yongqingfang.", zh:"沿涌向西步行 6 分钟到荔湾博物馆，或向东到永庆坊。" },
-  source:{ en:"Content: project content team field notes, Oct 2026. Programme times verified Oct 2026 (they change monthly).", zh:"内容：项目内容团队实地记录，2026 年 10 月。演出时间核实于 2026 年 10 月（每月调整）。" },
-  onsite:[
-    { prompt:{en:"Sit somewhere you can see the stage floor.",zh:"找个能看见台面的位置坐下。"},
-      look:{en:"There is almost no scenery. A table and two chairs are all that is on stage.",zh:"台上几乎没有布景，只有一桌二椅。"},
-      q:{en:"Why is the stage empty?",zh:"舞台上为什么是空的？"},
-      a:{en:"Because the audience supplies the world. A chair becomes a door, a wall or a mountain depending on how the actor treats it; a whip means a horse; a circle walked on stage means a hundred miles. Emptying the stage forces the story into the actor’s body — and lets a cheap travelling troupe perform anywhere.",
-         zh:"因为那个世界由观众补上。一把椅子，随演员如何对待它，可以是门、是墙、是山；一根马鞭就是马；绕台一圈就是百里。空舞台把故事逼进演员的身体里，也让一个便宜的流动戏班能在任何地方演出。"} },
-    { prompt:{en:"Listen to the percussion, not the melody.",zh:"先听锣鼓，不听旋律。"},
-      look:{en:"The drums and cymbals are not background — they are leading, and they change with the emotion.",zh:"锣鼓不是伴奏，它在主导，并且随情绪变化。"},
-      q:{en:"Why is the percussion so loud?",zh:"锣鼓为什么这么响？"},
-      a:{en:"Before amplification, a troupe had to be heard outdoors, over a crowd, in a tea house or a village square. So the percussion became the conductor: it sets tempo, marks entrances, and tells you whether the next moment is comic, romantic or violent — before the singer says a word.",
-         zh:"在没有扩音的年代，戏班要在户外、在人群之上、在茶楼或村口广场被听见。于是锣鼓成了指挥：定速度、标上下场，并在演唱者开口之前，就告诉你下一刻是喜、是情还是武。"} }
-  ]
-},
+
 {
   id:"shangxiajiu", en:"Shangxiajiu Pedestrian Street", zh:"上下九步行街", district:"liwan", cat:"district",
   art:"arcade", hue:["#A8763C","#DFC08A","#5C3F1E"], em:"🛍", x:31, y:55, time:"45–60 min", rating:4, booking:false,
@@ -2184,7 +2033,7 @@ const PLACES = [
   },
   related:["porcelain","old-shops","qilou"],
   next:{ en:"2 min walk to Yongqingfang’s main lane, then the opera museum.", zh:"步行 2 分钟到永庆坊主巷，再去粤剧艺术博物馆。" },
-  source:{ en:"Content: project content team field notes, Oct 2026. Prices verified Oct 2026.", zh:"内容：项目内容团队实地记录，2026 年 10 月。价格核实于 2026 年 10 月。" },
+  source:{ en:"Content: project team field notes; Liwan District government site, “Xiguan Mansion: A Gem of Lingnan Residential Architecture”.", zh:"内容：项目团队实地整理；广州市荔湾区政府官网《西关大屋——岭南居民建筑的瑰宝》。" },
   onsite:[
     { prompt:{en:"Watch the painter’s hand for one minute.",zh:"观察画师的手一分钟。"},
       look:{en:"The brush is drawing a gold line about a millimetre wide, on a curved surface.",zh:"笔尖正在弧面上勾一条约一毫米宽的金线。"},
@@ -2441,7 +2290,7 @@ const ROUTES = [
   why:{ en:"If you only have one day, this is the shortest path through the whole system: family architecture first, then daily tea, then the opera that carries the stories, then the arcade street that connects all of it. Each stop answers a question raised by the previous one.",
         zh:"如果只有一天，这是穿过整个体系最短的一条路：先看家族的房子，再喝日常的茶，然后听承载故事的戏，最后走上把这一切连起来的骑楼街。每一站都在回答上一站提出的问题。" },
   stops:[
-    { id:"chen-clan", stay:{en:"60 min",zh:"60 分钟"}, dist:{en:"800 m · 11 min walk",zh:"800 米 · 步行 11 分钟"}, booking:false,
+    { id:"p13", stay:{en:"60 min",zh:"60 分钟"}, dist:{en:"800 m · 11 min walk",zh:"800 米 · 步行 11 分钟"}, booking:false,
       plan:{ en:"Start with family structure. Everything else in Lingnan culture is downstream of how a lineage organised money, marriage and education.", zh:"先从家族结构开始。岭南文化的其他部分，都是宗族如何组织钱财、婚姻与教育的下游结果。" },
       understand:{ en:"Why a building says more about a family than a document does.", zh:"为什么一栋建筑比一份文件更能说明一个家族。" } },
     { id:"xiguan-house", stay:{en:"40 min",zh:"40 分钟"}, dist:{en:"650 m · 9 min walk",zh:"650 米 · 步行 9 分钟"}, booking:false,
@@ -2450,7 +2299,7 @@ const ROUTES = [
     { id:"tea-house", stay:{en:"75 min",zh:"75 分钟"}, dist:{en:"500 m · 7 min walk",zh:"500 米 · 步行 7 分钟"}, booking:false,
       plan:{ en:"Stop for tea. This is not a break — it is the social system you just walked through, in operation, with food.", zh:"停下来喝茶。这不是休息——你刚才走过的社会系统正在这里运转，还配着点心。" },
       understand:{ en:"Why sitting together for two hours is the point, not the delay.", zh:"为什么坐在一起两小时才是重点，而不是耽误。" } },
-    { id:"opera-museum", stay:{en:"50 min",zh:"50 分钟"}, dist:{en:"450 m · 6 min walk",zh:"450 米 · 步行 6 分钟"}, booking:false,
+    { id:"p11", stay:{en:"50 min",zh:"50 分钟"}, dist:{en:"450 m · 6 min walk",zh:"450 米 · 步行 6 分钟"}, booking:false,
       plan:{ en:"Now the stories those families told each other. Watch twenty minutes of an actual performance if the timing works.", zh:"接着是那些家族彼此讲述的故事。时间合适的话，看二十分钟真实演出。" },
       understand:{ en:"How an empty stage can carry a whole world through gesture.", zh:"空舞台如何靠程式承载整个世界。" } },
     { id:"shangxiajiu", stay:{en:"45 min",zh:"45 分钟"}, dist:{en:"End of route",zh:"路线终点"}, booking:false,
@@ -2487,13 +2336,13 @@ const ROUTES = [
   why:{ en:"Four buildings and one myth, one idea: the family is the institution that built this region, and you can read its priorities in brick, in gables and in floor plans.",
         zh:"四栋建筑加一个神话，一个主题：家族是建造这个地区的机构，而它的优先级就写在砖、山墙和平面图里。" },
   stops:[
-    { id:"chen-clan", stay:{en:"60 min",zh:"60 分钟"}, dist:{en:"1.1 km · 15 min walk",zh:"1.1 公里 · 步行 15 分钟"}, booking:false,
+    { id:"p13", stay:{en:"60 min",zh:"60 分钟"}, dist:{en:"1.1 km · 15 min walk",zh:"1.1 公里 · 步行 15 分钟"}, booking:false,
       plan:{ en:"The clan at full scale: 72 branches, one surname, one scholarship hall.", zh:"宗族的完整尺度：72 房、一个姓氏、一座书院。" },
       understand:{ en:"How a lineage turned private money into public status.", zh:"宗族如何把私人的钱变成公开的身份。" } },
     { id:"xiguan-house", stay:{en:"40 min",zh:"40 分钟"}, dist:{en:"700 m · 10 min walk",zh:"700 米 · 步行 10 分钟"}, booking:false,
       plan:{ en:"The same values at household scale, arranged around a light court.", zh:"同样的价值观放到家庭尺度，围绕天井排布。" },
       understand:{ en:"Privacy as a spatial strategy, not a locked door.", zh:"隐私是一种空间策略，而不是一把锁。" } },
-    { id:"liwan-museum", stay:{en:"50 min",zh:"50 分钟"}, dist:{en:"600 m · 8 min walk",zh:"600 米 · 步行 8 分钟"}, booking:false,
+    { id:"p14", stay:{en:"50 min",zh:"50 分钟"}, dist:{en:"600 m · 8 min walk",zh:"600 米 · 步行 8 分钟"}, booking:false,
       plan:{ en:"See the objects: weddings, festivals, and the porcelain the family money came from.", zh:"看实物：婚俗、节庆，以及家族财富来源的瓷器。" },
       understand:{ en:"What a Cantonese family actually spent money on.", zh:"广府家庭的钱究竟花在哪里。" } },
     { id:"guangzhou-museum", stay:{en:"60 min",zh:"60 分钟"}, dist:{en:"350 m · 5 min walk",zh:"350 米 · 步行 5 分钟"}, booking:false,
@@ -2513,10 +2362,10 @@ const ROUTES = [
   why:{ en:"Lingnan performance is not one art. It is a stage tradition, a street ritual and an amateur hobby — and this route shows all three, ending where ordinary people keep it alive for free.",
         zh:"岭南的表演不是一种艺术，而是舞台传统、街头仪式和业余爱好三件事。这条路线把三者串起来，最后一站是普通人免费把它延续下去的地方。" },
   stops:[
-    { id:"opera-museum", stay:{en:"60 min",zh:"60 分钟"}, dist:{en:"900 m · 12 min walk",zh:"900 米 · 步行 12 分钟"}, booking:false,
+    { id:"p11", stay:{en:"60 min",zh:"60 分钟"}, dist:{en:"900 m · 12 min walk",zh:"900 米 · 步行 12 分钟"}, booking:false,
       plan:{ en:"Start with the professional art: costume, notation, instruments, and a performance on a traditional stage.", zh:"从专业艺术开始：戏服、工尺谱、乐器，以及传统戏台上的演出。" },
       understand:{ en:"Why an empty stage is a feature, not a budget problem.", zh:"为什么空舞台是特点，而不是预算问题。" } },
-    { id:"chen-clan", stay:{en:"45 min",zh:"45 分钟"}, dist:{en:"1.2 km · 16 min walk",zh:"1.2 公里 · 步行 16 分钟"}, booking:false,
+    { id:"p13", stay:{en:"45 min",zh:"45 分钟"}, dist:{en:"1.2 km · 16 min walk",zh:"1.2 公里 · 步行 16 分钟"}, booking:false,
       plan:{ en:"Then the street version: the lion that must be invited, and the opera scenes baked into the roof that anyone could read.", zh:"然后是街头版本：必须被邀请的狮子，以及屋顶上人人看得懂的戏文。" },
       understand:{ en:"How performance and blessing are the same act outdoors.", zh:"在户外，表演与祝福为什么是同一件事。" } },
     { id:"yuexiu-hill", stay:{en:"50 min",zh:"50 分钟"}, dist:{en:"End of route",zh:"路线终点"}, booking:false,
@@ -2979,6 +2828,25 @@ STORIES.push(
    ③ 同步 p1_head.html 底部署名里的版本号 ④ 更新根目录的 更新日志.md
    ================================================================== */
 const CHANGELOG = [
+  {
+    v:"v3.2", date:"2026-11-04",
+    items:{
+      en:[
+        "Content review pass on Liwan places: split repeated intro/why text into separate sections",
+        "Removed three duplicate place records (Chen Clan, Liwan Museum, Cantonese Opera Art Museum); routes now point to the surviving records",
+        "Updated opening hours, booking rules and ticket notes for the reviewed places",
+        "Added official sources for the tea house, Xiguan Mansion and craft studio records",
+        "Deleted the redundant last bullet from 12 place highlight lists"
+      ],
+      zh:[
+        "荔湾点位内容复核：把「简介」与「为什么要去」重复的文本拆开",
+        "删除 3 条重复点位（陈家祠 / 荔湾博物馆 / 粤剧艺术博物馆），路线改指向保留点位",
+        "按复核意见更新开放时间、预约规则与票务说明",
+        "为茶楼、西关大屋、西关手工艺工作室补充官方来源",
+        "删除 12 个点位看点列表里重复的末条"
+      ]
+    }
+  },
   {
     v:"v3.1", date:"2026-10-26",
     items:{
@@ -3983,12 +3851,13 @@ const TEAM_PLACES = [
   art:"opera", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏛", x:49.8, y:38.9,
   num:11, areaHint:"", zhOnly:true,
   time:"45–60 min", rating:0, booking:false,
-  one:{en:"一座为保护和传承世界非物质文化遗产粤剧而建的岭南园林式博物馆，坐落于恩宁路骑楼老街之中。 为什么要去？：可以在园林实景中聆听粤剧曲艺展演，近距离欣赏戏服、乐器、老唱片等数百件藏品，从视觉、听觉多维度感受粤剧艺术的独特魅力。 文化/非遗类别：粤剧为联合国教科文组织人类非物质文化遗产代表作；博物馆为国家二级博物馆，岭南园林式专题艺术博物馆。",zh:"一座为保护和传承世界非物质文化遗产粤剧而建的岭南园林式博物馆，坐落于恩宁路骑楼老街之中。 为什么要去？：可以在园林实景中聆听粤剧曲艺展演，近距离欣赏戏服、乐器、老唱片等数百件藏品，从视觉、听觉多维度感受粤剧艺术的独特魅力。 文化/非遗类别：粤剧为联合国教科文组织人类非物质文化遗产代表作；博物馆为国家二级博物馆，岭南园林式专题艺术博物馆。"},
-  why:{en:"一座为保护和传承世界非物质文化遗产粤剧而建的岭南园林式博物馆，坐落于恩宁路骑楼老街之中。 为什么要去？：可以在园林实景中聆听粤剧曲艺展演，近距离欣赏戏服、乐器、老唱片等数百件藏品，从视觉、听觉多维度感受粤剧艺术的独特魅力。 文化/非遗类别：粤剧为联合国教科文组织人类非物质文化遗产代表作；博物馆为国家二级博物馆，岭南园林式专题艺术博物馆。",zh:"一座为保护和传承世界非物质文化遗产粤剧而建的岭南园林式博物馆，坐落于恩宁路骑楼老街之中。 为什么要去？：可以在园林实景中聆听粤剧曲艺展演，近距离欣赏戏服、乐器、老唱片等数百件藏品，从视觉、听觉多维度感受粤剧艺术的独特魅力。 文化/非遗类别：粤剧为联合国教科文组织人类非物质文化遗产代表作；博物馆为国家二级博物馆，岭南园林式专题艺术博物馆。"},
+  one:{en:"一座为保护和传承世界非物质文化遗产粤剧而建的岭南园林式博物馆，坐落于恩宁路骑楼老街之中。",zh:"一座为保护和传承世界非物质文化遗产粤剧而建的岭南园林式博物馆，坐落于恩宁路骑楼老街之中。"},
+  why:{en:"可以在园林实景中聆听粤剧曲艺展演，近距离欣赏戏服、乐器、老唱片等数百件藏品，从视觉、听觉多维度感受粤剧艺术的独特魅力。 文化/非遗类别：粤剧为联合国教科文组织人类非物质文化遗产代表作；博物馆为国家二级博物馆，岭南园林式专题艺术博物馆。",zh:"可以在园林实景中聆听粤剧曲艺展演，近距离欣赏戏服、乐器、老唱片等数百件藏品，从视觉、听觉多维度感受粤剧艺术的独特魅力。 文化/非遗类别：粤剧为联合国教科文组织人类非物质文化遗产代表作；博物馆为国家二级博物馆，岭南园林式专题艺术博物馆。"},
   look:[
     {t:{en:"岭南园林与水系景观",zh:"岭南园林与水系景观"}, d:{en:"环绕晚沙湖错落布局六组院落，水上戏台广福台每周定期举行粤剧粤曲展演。",zh:"环绕晚沙湖错落布局六组院落，水上戏台广福台每周定期举行粤剧粤曲展演。"}},
     {t:{en:"基本陈列“南国红豆 粤韵佳音”",zh:"基本陈列“南国红豆 粤韵佳音”"}, d:{en:"系统展示粤剧发展历程、艺术特色与海内外影响力。③ 广福台水上戏台：岭南传统戏台形制，定期有粤剧折子戏实景演出。",zh:"系统展示粤剧发展历程、艺术特色与海内外影响力。③ 广福台水上戏台：岭南传统戏台形制，定期有粤剧折子戏实景演出。"}},
-    {t:{en:"园林建筑细部",zh:"园林建筑细部"}, d:{en:"木雕、砖雕、灰塑等广府传统工艺装饰。",zh:"木雕、砖雕、灰塑等广府传统工艺装饰。"}},
+    {t:{en:"戏服、乐器与老唱片",zh:"戏服、乐器与老唱片"}, d:{en:"数百件粤剧藏品，看得见戏台之外的行当细节",zh:"数百件粤剧藏品，看得见戏台之外的行当细节"}},
+  {t:{en:"园林建筑细部",zh:"园林建筑细部"}, d:{en:"木雕、砖雕、灰塑等广府传统工艺装饰。",zh:"木雕、砖雕、灰塑等广府传统工艺装饰。"}},
   ],
   confuse:[
     {q:{en:"外国游客看到园林与博物馆结合，容易误以为只是一个公园。",zh:"外国游客看到园林与博物馆结合，容易误以为只是一个公园。"}, a:{en:"粤剧艺术博物馆虽有园林景观，但核心功能是粤剧艺术的收藏、展示与传承。园林中的水上戏台本身就是活态的粤剧演出空间，博物馆展厅则系统陈列粤剧文物，二者共同服务于粤剧非遗的保护与传播。",zh:"粤剧艺术博物馆虽有园林景观，但核心功能是粤剧艺术的收藏、展示与传承。园林中的水上戏台本身就是活态的粤剧演出空间，博物馆展厅则系统陈列粤剧文物，二者共同服务于粤剧非遗的保护与传播。"}},
@@ -3996,11 +3865,11 @@ const TEAM_PLACES = [
   ],
   context:{en:"（待团队补充跨文化解读）",zh:"（待团队补充跨文化解读）"},
   exp:[{en:"园林内广福台定期粤剧粤曲展演",zh:"园林内广福台定期粤剧粤曲展演"},{en:"粤剧主题研学活动",zh:"粤剧主题研学活动"},{en:"少儿粤剧传承培训",zh:"少儿粤剧传承培训"}],
-  info:{address:{en:"广州市荔湾区恩宁路127号",zh:"广州市荔湾区恩宁路127号"}, hours:{en:"以现场公告为准",zh:"以现场公告为准"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
+  info:{address:{en:"广州市荔湾区恩宁路127号",zh:"广州市荔湾区恩宁路127号"}, hours:{en:"9:00-21:00 (last entry 20:30); temporary galleries 9:00-17:30; closed Mondays (public holidays excepted)",zh:"9:00-21:00（20:30 停止入馆）；临展厅 9:00-17:30；逢周一闭馆（法定节假日除外）"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
         ticket:{en:"免费开放，无需预约",zh:"免费开放，无需预约"}, transport:{en:"",zh:""}},
   related:["cantonese-opera","yuequ-parks"],
   next:{en:"下一站可以顺着走去「南越王博物院·王宫展区」。",zh:"下一站可以顺着走去「南越王博物院·王宫展区」。"},
-  source:{en:"内容：项目团队实地整理（严思宇）；英文版本待译。",zh:"内容：项目团队实地整理（严思宇）；英文版本待译。"},
+  source:{en:"Content: project team field notes; opening hours per the museum’s official WeChat account.",zh:"内容：项目团队实地整理；开放时间据馆方微信公众号。"},
   qa:{en:"What makes Cantonese Opera different from other traditional Chinese operas?", enA:"Cantonese Opera is distinguished by its use of the Cantonese dialect, its blend of martial arts and singing, and its unique percussion-driven music style. It also incorporates elements of Western music, reflecting Guangzhou's role as a trading port.", zhQ:"（粤剧与其他中国传统戏曲有何不同？）", zhA:"（粤剧以粤方言演唱，融合南派武功与唱腔，采用独特的锣鼓音乐体系，并因广州作为通商口岸而吸收过西方音乐元素，因此与其他戏曲剧种有显著区别。）"},
   onsite:[
     {prompt:{en:"抬起头看：岭南园林与水系景观",zh:"抬起头看：岭南园林与水系景观"}, look:{en:"环绕晚沙湖错落布局六组院落，水上戏台广福台每周定期举行粤剧粤曲展演。",zh:"环绕晚沙湖错落布局六组院落，水上戏台广福台每周定期举行粤剧粤曲展演。"}, q:{en:"外国游客看到园林与博物馆结合，容易误以为只是一个公园。",zh:"外国游客看到园林与博物馆结合，容易误以为只是一个公园。"}, a:{en:"粤剧艺术博物馆虽有园林景观，但核心功能是粤剧艺术的收藏、展示与传承。园林中的水上戏台本身就是活态的粤剧演出空间，博物馆展厅则系统陈列粤剧文物，二者共同服务于粤剧非遗的保护与传播。",zh:"粤剧艺术博物馆虽有园林景观，但核心功能是粤剧艺术的收藏、展示与传承。园林中的水上戏台本身就是活态的粤剧演出空间，博物馆展厅则系统陈列粤剧文物，二者共同服务于粤剧非遗的保护与传播。"}},
@@ -4038,12 +3907,12 @@ const TEAM_PLACES = [
   ]
 },
 {
-  id:"p13", en:"陈家祠（广东民间工艺博物馆）", zh:"陈家祠（广东民间工艺博物馆）", district:"liwan", cat:"museum",
+  id:"p13", en:"Chen Clan Ancestral Hall (Guangdong Folk Craft Museum)", zh:"陈家祠（广东民间工艺博物馆）", district:"liwan", cat:"museum",
   art:"incense", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏛", x:34.1, y:46.8,
   num:13, areaHint:"", zhOnly:true,
   time:"75–90 min", rating:0, booking:false,
-  one:{en:"清光绪年间广东七十二县陈姓合族祠，现为广东民间工艺博物馆，被誉为“岭南建筑艺术明珠”。 为什么要去？：在集中展示岭南“三雕二塑一铸一画”的实体建筑中，亲眼目睹石湾陶塑瓦脊、金漆木雕神龛、灰塑等工艺原件，还可观摩广绣匠人现场演示。 文化/非遗类别：全国重点文物保护单位；国家一级博物馆，广东民间工艺专题博物馆。",zh:"清光绪年间广东七十二县陈姓合族祠，现为广东民间工艺博物馆，被誉为“岭南建筑艺术明珠”。 为什么要去？：在集中展示岭南“三雕二塑一铸一画”的实体建筑中，亲眼目睹石湾陶塑瓦脊、金漆木雕神龛、灰塑等工艺原件，还可观摩广绣匠人现场演示。 文化/非遗类别：全国重点文物保护单位；国家一级博物馆，广东民间工艺专题博物馆。"},
-  why:{en:"清光绪年间广东七十二县陈姓合族祠，现为广东民间工艺博物馆，被誉为“岭南建筑艺术明珠”。 为什么要去？：在集中展示岭南“三雕二塑一铸一画”的实体建筑中，亲眼目睹石湾陶塑瓦脊、金漆木雕神龛、灰塑等工艺原件，还可观摩广绣匠人现场演示。 文化/非遗类别：全国重点文物保护单位；国家一级博物馆，广东民间工艺专题博物馆。",zh:"清光绪年间广东七十二县陈姓合族祠，现为广东民间工艺博物馆，被誉为“岭南建筑艺术明珠”。 为什么要去？：在集中展示岭南“三雕二塑一铸一画”的实体建筑中，亲眼目睹石湾陶塑瓦脊、金漆木雕神龛、灰塑等工艺原件，还可观摩广绣匠人现场演示。 文化/非遗类别：全国重点文物保护单位；国家一级博物馆，广东民间工艺专题博物馆。"},
+  one:{en:"清光绪年间广东七十二县陈姓合族祠，现为广东民间工艺博物馆，被誉为“岭南建筑艺术明珠”。",zh:"清光绪年间广东七十二县陈姓合族祠，现为广东民间工艺博物馆，被誉为“岭南建筑艺术明珠”。"},
+  why:{en:"在集中展示岭南“三雕二塑一铸一画”的实体建筑中，亲眼目睹石湾陶塑瓦脊、金漆木雕神龛、灰塑等工艺原件，还可观摩广绣匠人现场演示。 文化/非遗类别：全国重点文物保护单位；国家一级博物馆，广东民间工艺专题博物馆。",zh:"在集中展示岭南“三雕二塑一铸一画”的实体建筑中，亲眼目睹石湾陶塑瓦脊、金漆木雕神龛、灰塑等工艺原件，还可观摩广绣匠人现场演示。 文化/非遗类别：全国重点文物保护单位；国家一级博物馆，广东民间工艺专题博物馆。"},
   look:[
     {t:{en:"正门与首进庭院",zh:"正门与首进庭院"}, d:{en:"朱门蓝天的对称构图，石狮、彩绘门神气势不凡。",zh:"朱门蓝天的对称构图，石狮、彩绘门神气势不凡。"}},
     {t:{en:"聚贤堂陶塑瓦脊",zh:"聚贤堂陶塑瓦脊"}, d:{en:"27米长的石湾陶塑人物群像，取材《三国》《水浒》故事。",zh:"27米长的石湾陶塑人物群像，取材《三国》《水浒》故事。"}},
@@ -4057,11 +3926,11 @@ const TEAM_PLACES = [
   ],
   context:{en:"对比参考：美国洛克菲勒中心建筑装饰艺术、日本日光东照宫雕刻装饰、朝鲜景福宫木雕、澳大利亚悉尼大学哥特复兴建筑、法国凡尔赛宫装饰艺术、英国西敏寺雕刻群；该建筑装饰艺术内核有相似之处，但工艺体系、装饰题材、材料运用、起源逻辑存在明显区别。",zh:"对比参考：美国洛克菲勒中心建筑装饰艺术、日本日光东照宫雕刻装饰、朝鲜景福宫木雕、澳大利亚悉尼大学哥特复兴建筑、法国凡尔赛宫装饰艺术、英国西敏寺雕刻群；该建筑装饰艺术内核有相似之处，但工艺体系、装饰题材、材料运用、起源逻辑存在明显区别。"},
   exp:[{en:"传统工艺研学活动",zh:"传统工艺研学活动"},{en:"广绣DIY体验（需预约）",zh:"广绣DIY体验（需预约）"},{en:"灰塑制作技艺展示",zh:"灰塑制作技艺展示"},{en:"（根据官方 蓝色的仅针对2026年）",zh:"（根据官方 蓝色的仅针对2026年）"}],
-  info:{address:{en:"广州市荔湾区中山七路恩龙里34号",zh:"广州市荔湾区中山七路恩龙里34号"}, hours:{en:"以现场公告为准",zh:"以现场公告为准"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
-        ticket:{en:"免费开放",zh:"免费开放"}, transport:{en:"",zh:""}},
+  info:{address:{en:"广州市荔湾区中山七路恩龙里34号",zh:"广州市荔湾区中山七路恩龙里34号"}, hours:{en:"9:00-17:30, last tickets and entry at 17:00 (closed Tuesdays)",zh:"9:00-17:30，17:00 停止售票及进馆（周二闭馆）"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
+        ticket:{en:"Advance booking required; full ticket ¥10. Special-occupation groups may enter free with work ID on designated holidays",zh:"需提前预约购票，全票 10 元；特殊职业人群在特殊节假日可凭工作证免费参观"}, transport:{en:"",zh:""}},
   related:["chen-clan","guangfu-architecture"],
   next:{en:"下一站可以顺着走去「锦纶会馆（广州丝织行业博物馆）」。",zh:"下一站可以顺着走去「锦纶会馆（广州丝织行业博物馆）」。"},
-  source:{en:"内容：项目团队实地整理（严思宇）；英文版本待译。",zh:"内容：项目团队实地整理（严思宇）；英文版本待译。"},
+  source:{en:"Content: project team field notes; official site of the Guangdong Folk Craft Museum, Liwan District government site.",zh:"内容：项目团队实地整理；广东民间工艺博物馆官网、广州市荔湾区政府官网。"},
   qa:{en:"What is the most representative decoration technique on Chen Clan Ancestral Hall?", enA:"The Shiwan ceramic figurines along the roof ridge are the most iconic. The 27-meter-long ridge features hundreds of glazed ceramic figures depicting scenes from Cantonese opera, legends, and daily life.", zhQ:"（陈家祠最具代表性的装饰工艺是什么？）", zhA:"（屋脊上的石湾陶塑人物最具代表性。27米长的陶塑瓦脊上排列着数百个釉陶人物，题材涵盖粤剧场景、民间传说和市井生活，被誉为“瓦脊上的岭南文化百科全书”。）"},
   onsite:[
     {prompt:{en:"抬起头看：正门与首进庭院",zh:"抬起头看：正门与首进庭院"}, look:{en:"朱门蓝天的对称构图，石狮、彩绘门神气势不凡。",zh:"朱门蓝天的对称构图，石狮、彩绘门神气势不凡。"}, q:{en:"外国游客看到大量精美雕刻，难以分辨“石雕、木雕、砖雕、灰塑、陶塑”的区别。",zh:"外国游客看到大量精美雕刻，难以分辨“石雕、木雕、砖雕、灰塑、陶塑”的区别。"}, a:{en:"石雕多用于柱础和石栏，木雕集中在大门和神龛，砖雕多见于墙楣，灰塑为屋顶立体灰泥雕塑，陶塑则是低温烧制的彩色陶瓷人物——每种工艺所用材料、施工位置和技法各不相同。",zh:"石雕多用于柱础和石栏，木雕集中在大门和神龛，砖雕多见于墙楣，灰塑为屋顶立体灰泥雕塑，陶塑则是低温烧制的彩色陶瓷人物——每种工艺所用材料、施工位置和技法各不相同。"}},
@@ -4073,8 +3942,8 @@ const TEAM_PLACES = [
   art:"tower", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏛", x:51.7, y:47.4,
   num:14, areaHint:"", zhOnly:true,
   time:"45–60 min", rating:0, booking:false,
-  one:{en:"隐于西关老宅中的区级博物馆，馆舍本身就是一栋不可移动的民国西关大屋文物。 为什么要去？：可以走进真实的西关大屋内部，观察木雕花窗、砖雕墙面、天井院落的空间格局，体验老广州民居生活的空间感受。 文化/非遗类别：广州市荔湾区博物馆，西关大屋建筑遗存；广州市文物保护单位。",zh:"隐于西关老宅中的区级博物馆，馆舍本身就是一栋不可移动的民国西关大屋文物。 为什么要去？：可以走进真实的西关大屋内部，观察木雕花窗、砖雕墙面、天井院落的空间格局，体验老广州民居生活的空间感受。 文化/非遗类别：广州市荔湾区博物馆，西关大屋建筑遗存；广州市文物保护单位。"},
-  why:{en:"隐于西关老宅中的区级博物馆，馆舍本身就是一栋不可移动的民国西关大屋文物。 为什么要去？：可以走进真实的西关大屋内部，观察木雕花窗、砖雕墙面、天井院落的空间格局，体验老广州民居生活的空间感受。 文化/非遗类别：广州市荔湾区博物馆，西关大屋建筑遗存；广州市文物保护单位。",zh:"隐于西关老宅中的区级博物馆，馆舍本身就是一栋不可移动的民国西关大屋文物。 为什么要去？：可以走进真实的西关大屋内部，观察木雕花窗、砖雕墙面、天井院落的空间格局，体验老广州民居生活的空间感受。 文化/非遗类别：广州市荔湾区博物馆，西关大屋建筑遗存；广州市文物保护单位。"},
+  one:{en:"隐于西关老宅中的区级博物馆，馆舍本身就是一栋不可移动的民国西关大屋文物。",zh:"隐于西关老宅中的区级博物馆，馆舍本身就是一栋不可移动的民国西关大屋文物。"},
+  why:{en:"可以走进真实的西关大屋内部，观察木雕花窗、砖雕墙面、天井院落的空间格局，体验老广州民居生活的空间感受。 文化/非遗类别：广州市荔湾区博物馆，西关大屋建筑遗存；国家三级博物馆。",zh:"可以走进真实的西关大屋内部，观察木雕花窗、砖雕墙面、天井院落的空间格局，体验老广州民居生活的空间感受。 文化/非遗类别：广州市荔湾区博物馆，西关大屋建筑遗存；国家三级博物馆。"},
   look:[
     {t:{en:"西关大屋建筑本体",zh:"西关大屋建筑本体"}, d:{en:"青砖石脚、木趟栊门、满洲窗、天井院落，典型西关民居格局。",zh:"青砖石脚、木趟栊门、满洲窗、天井院落，典型西关民居格局。"}},
     {t:{en:"西关民俗陈列",zh:"西关民俗陈列"}, d:{en:"展示传统西关人家的家具、服饰、生活用品。",zh:"展示传统西关人家的家具、服饰、生活用品。"}},
@@ -4102,8 +3971,8 @@ const TEAM_PLACES = [
   art:"city", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏛", x:38.4, y:44,
   num:15, areaHint:"", zhOnly:true,
   time:"60–75 min", rating:0, booking:false,
-  one:{en:"一座曾整栋“搬过家”的清代丝织行业会馆，如今是广州唯一的丝织行业博物馆。 为什么要去？：可以了解广州丝织业从明清到近代的兴衰历程，同时观察一座清代建筑如何通过整体平移技术得以保存的工程案例。",zh:"一座曾整栋“搬过家”的清代丝织行业会馆，如今是广州唯一的丝织行业博物馆。 为什么要去？：可以了解广州丝织业从明清到近代的兴衰历程，同时观察一座清代建筑如何通过整体平移技术得以保存的工程案例。"},
-  why:{en:"一座曾整栋“搬过家”的清代丝织行业会馆，如今是广州唯一的丝织行业博物馆。 为什么要去？：可以了解广州丝织业从明清到近代的兴衰历程，同时观察一座清代建筑如何通过整体平移技术得以保存的工程案例。",zh:"一座曾整栋“搬过家”的清代丝织行业会馆，如今是广州唯一的丝织行业博物馆。 为什么要去？：可以了解广州丝织业从明清到近代的兴衰历程，同时观察一座清代建筑如何通过整体平移技术得以保存的工程案例。"},
+  one:{en:"一座曾整栋“搬过家”的清代丝织行业会馆，如今是广州唯一的丝织行业博物馆。",zh:"一座曾整栋“搬过家”的清代丝织行业会馆，如今是广州唯一的丝织行业博物馆。"},
+  why:{en:"可以了解广州丝织业从明清到近代的兴衰历程，同时观察一座清代建筑如何通过整体平移技术得以保存的工程案例。",zh:"可以了解广州丝织业从明清到近代的兴衰历程，同时观察一座清代建筑如何通过整体平移技术得以保存的工程案例。"},
   look:[
     {t:{en:"会馆建筑本体",zh:"会馆建筑本体"}, d:{en:"清代行业会馆的典型格局，保留木雕、石雕装饰。",zh:"清代行业会馆的典型格局，保留木雕、石雕装饰。"}},
     {t:{en:"丝织贸易展",zh:"丝织贸易展"}, d:{en:"展示广州丝织品的外销历史与贸易网络。",zh:"展示广州丝织品的外销历史与贸易网络。"}},
@@ -4280,13 +4149,12 @@ const TEAM_PLACES = [
   art:"city", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏛", x:56.2, y:42.3,
   num:21, areaHint:"永庆坊", zhOnly:true,
   time:"60–75 min", rating:0, booking:false,
-  one:{en:"布拉肠与窝篮拉肠工具实物",zh:"布拉肠与窝篮拉肠工具实物"},
-  why:{en:"布拉肠与窝篮拉肠工具实物",zh:"布拉肠与窝篮拉肠工具实物"},
+  one:{en:"藏在永庆坊骑楼群里的一间以肠粉为主题的博览馆，用老工具和老场景封存着广州街头米香味的百年记忆。",zh:"藏在永庆坊骑楼群里的一间以肠粉为主题的博览馆，用老工具和老场景封存着广州街头米香味的百年记忆。"},
+  why:{en:"可以亲眼看到布拉肠、窝篮拉肠、抽屉式拉肠三种制作工具实物对比，在还原的 80 年代老肠粉店场景中理解“一碟肠粉如何从米浆变成广州人的日常”。",zh:"可以亲眼看到布拉肠、窝篮拉肠、抽屉式拉肠三种制作工具实物对比，在还原的 80 年代老肠粉店场景中理解“一碟肠粉如何从米浆变成广州人的日常”。"},
   look:[
-    {t:{en:"布拉肠与窝篮拉肠工具实物",zh:"布拉肠与窝篮拉肠工具实物"}, d:{en:"展示传统竹篾窝篮和棉布蒸具，理解透气性对米皮香气的关键影响。",zh:"展示传统竹篾窝篮和棉布蒸具，理解透气性对米皮香气的关键影响。"}},
-    {t:{en:"80年代老肠粉店场景复原",zh:"80年代老肠粉店场景复原"}, d:{en:"还原旧式肠粉档口的灶台、蒸炉和招牌，感受市井饮食空间的原貌。",zh:"还原旧式肠粉档口的灶台、蒸炉和招牌，感受市井饮食空间的原貌。"}},
-    {t:{en:"三种肠粉制作工艺对比",zh:"三种肠粉制作工艺对比"}, d:{en:"布拉、窝篮、抽屉式，从工具到口感差异一目了然。",zh:"布拉、窝篮、抽屉式，从工具到口感差异一目了然。"}},
-    {t:{en:"现场制作体验区",zh:"现场制作体验区"}, d:{en:"可亲手操作抽屉式拉肠，体验30秒出笼的节奏。5.相关活动：肠粉制作DIY体验（需预约）、广式早餐文化研学活动。",zh:"可亲手操作抽屉式拉肠，体验30秒出笼的节奏。5.相关活动：肠粉制作DIY体验（需预约）、广式早餐文化研学活动。"}},
+  {t:{en:"布拉肠与窝篮拉肠工具实物",zh:"布拉肠与窝篮拉肠工具实物"}, d:{en:"展示传统竹篾窝篮和棉布蒸具，理解透气性对米皮香气的关键影响。",zh:"展示传统竹篾窝篮和棉布蒸具，理解透气性对米皮香气的关键影响。"}},
+  {t:{en:"80年代老肠粉店场景复原",zh:"80年代老肠粉店场景复原"}, d:{en:"还原旧式肠粉档口的灶台、蒸炉和招牌，感受市井饮食空间的原貌。",zh:"还原旧式肠粉档口的灶台、蒸炉和招牌，感受市井饮食空间的原貌。"}},
+  {t:{en:"三种肠粉制作工艺对比",zh:"三种肠粉制作工艺对比"}, d:{en:"布拉、窝篮、抽屉式，从工具到口感差异一目了然。",zh:"布拉、窝篮、抽屉式，从工具到口感差异一目了然。"}}
   ],
   confuse:[
     {q:{en:"外国游客疑惑，肠粉看起来薄薄一层，为什么会成为广州延续百年的早餐主食？",zh:"外国游客疑惑，肠粉看起来薄薄一层，为什么会成为广州延续百年的早餐主食？"}, a:{en:"窝篮用竹篾编成，透气性好，蒸出的米皮带有竹香且口感更浓郁；抽屉式铁盘传热快，出笼更快、皮更薄。两者代表不同时代的工艺选择，风味各有侧重。",zh:"窝篮用竹篾编成，透气性好，蒸出的米皮带有竹香且口感更浓郁；抽屉式铁盘传热快，出笼更快、皮更薄。两者代表不同时代的工艺选择，风味各有侧重。"}},
@@ -4370,10 +4238,9 @@ const TEAM_PLACES = [
   one:{en:"藏在芳村闹市旁的清代邝氏古村，19幢青砖大屋沿“井”字形麻石街巷静立了140余年。",zh:"藏在芳村闹市旁的清代邝氏古村，19幢青砖大屋沿“井”字形麻石街巷静立了140余年。"},
   why:{en:"可以在没有过度商业化的真实生活场景中走进完整的清代青砖民居群，观察镬耳山墙、木雕花窗、砖雕窗楣等岭南民居细节，同时感受至今仍有居民生活的市井气息与“北有陈家祠，南有聚龙村”的古村美学。",zh:"可以在没有过度商业化的真实生活场景中走进完整的清代青砖民居群，观察镬耳山墙、木雕花窗、砖雕窗楣等岭南民居细节，同时感受至今仍有居民生活的市井气息与“北有陈家祠，南有聚龙村”的古村美学。"},
   look:[
-    {t:{en:"19幢清代青砖大屋",zh:"19幢清代青砖大屋"}, d:{en:"坐北朝南、砖木结构，沿“井”字形街巷规整排布，墙脚以整块麻石砌成。",zh:"坐北朝南、砖木结构，沿“井”字形街巷规整排布，墙脚以整块麻石砌成。"}},
-    {t:{en:"镬耳山墙与碌灰筒瓦",zh:"镬耳山墙与碌灰筒瓦"}, d:{en:"典型广府民居屋顶形制，兼具防火与美学功能。",zh:"典型广府民居屋顶形制，兼具防火与美学功能。"}},
-    {t:{en:"木雕花窗与砖雕窗楣",zh:"木雕花窗与砖雕窗楣"}, d:{en:"屋内雕梁画栋，窗楣灰雕绘有富贵吉祥图案。",zh:"屋内雕梁画栋，窗楣灰雕绘有富贵吉祥图案。"}},
-    {t:{en:"邝氏宗祠与古树广场",zh:"邝氏宗祠与古树广场"}, d:{en:"村口古榕与宗祠构成村落公共空间的核心，见证百年议事与节庆活动。5. 相关活动：部分旧址已引入咖啡馆、非遗艺术等文商旅业态，可体验传统文化项目。",zh:"村口古榕与宗祠构成村落公共空间的核心，见证百年议事与节庆活动。5. 相关活动：部分旧址已引入咖啡馆、非遗艺术等文商旅业态，可体验传统文化项目。"}},
+  {t:{en:"19幢清代青砖大屋",zh:"19幢清代青砖大屋"}, d:{en:"坐北朝南、砖木结构，沿“井”字形街巷规整排布，墙脚以整块麻石砌成。",zh:"坐北朝南、砖木结构，沿“井”字形街巷规整排布，墙脚以整块麻石砌成。"}},
+  {t:{en:"镬耳山墙与碌灰筒瓦",zh:"镬耳山墙与碌灰筒瓦"}, d:{en:"典型广府民居屋顶形制，兼具防火与美学功能。",zh:"典型广府民居屋顶形制，兼具防火与美学功能。"}},
+  {t:{en:"木雕花窗与砖雕窗楣",zh:"木雕花窗与砖雕窗楣"}, d:{en:"屋内雕梁画栋，窗楣灰雕绘有富贵吉祥图案。",zh:"屋内雕梁画栋，窗楣灰雕绘有富贵吉祥图案。"}}
   ],
   confuse:[
     {q:{en:"外国游客看到仍有居民在古屋内生活，不确定是否可以进入参观。",zh:"外国游客看到仍有居民在古屋内生活，不确定是否可以进入参观。"}, a:{en:"聚龙村与过度商业化的古村落不同，至今仍有居民居住。沿麻石街巷和公共空间可以自由参观，但进入居民私宅需征得同意，拍摄居民生活场景应注意尊重。",zh:"聚龙村与过度商业化的古村落不同，至今仍有居民居住。沿麻石街巷和公共空间可以自由参观，但进入居民私宅需征得同意，拍摄居民生活场景应注意尊重。"}},
@@ -4381,7 +4248,7 @@ const TEAM_PLACES = [
   ],
   context:{en:"对比参考：美国殖民时期村落遗址、日本传统町屋保存区、朝鲜韩屋村、澳大利亚殖民时期移民定居点、法国普罗旺斯古村、英国科茨沃尔德传统村落；该传统村落建筑群内核有相似之处，但布局形制、建筑材料、家族组织、起源逻辑存在明显区别。",zh:"对比参考：美国殖民时期村落遗址、日本传统町屋保存区、朝鲜韩屋村、澳大利亚殖民时期移民定居点、法国普罗旺斯古村、英国科茨沃尔德传统村落；该传统村落建筑群内核有相似之处，但布局形制、建筑材料、家族组织、起源逻辑存在明显区别。"},
   exp:[{en:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。",zh:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。"}],
-  info:{address:{en:"广州市荔湾区冲口街道聚兴大街",zh:"广州市荔湾区冲口街道聚兴大街"}, hours:{en:"全天开放（村内美学展览通常9:00-18:00，17:30停止入场）。",zh:"全天开放（村内美学展览通常9:00-18:00，17:30停止入场）。"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
+  info:{address:{en:"广州市荔湾区冲口街道聚兴大街",zh:"广州市荔湾区冲口街道聚兴大街"}, hours:{en:"Open all day",zh:"全天开放"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
         ticket:{en:"免费开放，无需预约",zh:"免费开放，无需预约"}, transport:{en:"",zh:""}},
   related:["qilou","xiguan-house"],
   next:{en:"下一站可以顺着走去「陈家祠（广东民间工艺博物馆）」。",zh:"下一站可以顺着走去「陈家祠（广东民间工艺博物馆）」。"},
@@ -4397,7 +4264,7 @@ const TEAM_PLACES = [
   art:"roof", hue:["#8C4A32","#D8AC5C","#3A2418"], em:"⛩", x:51.7, y:47.4,
   num:25, areaHint:"光复南", zhOnly:true,
   time:"60–75 min", rating:0, booking:false,
-  one:{en:"光复南路一条200米长的老巷，路面之下埋着明代接待海外贡使的官方驿站遗址。",zh:"光复南路一条200米长的老巷，路面之下埋着明代接待海外贡使的官方驿站遗址。"},
+  one:{en:"怀远驿遗址位于光复南路一条 200 米长的老巷，路面之下埋藏着明代重建、用于接待海外贡使的官方驿站遗址。",zh:"怀远驿遗址位于光复南路一条 200 米长的老巷，路面之下埋藏着明代重建、用于接待海外贡使的官方驿站遗址。"},
   why:{en:"可以在一条看似普通的老街巷中，通过现存37号、42号民居等历史建筑和街区微改造后的标识系统，理解明代广州“怀柔远人”的对外接待制度，以及怀远驿如何从江边驿站演变为远离江岸的历史街巷。",zh:"可以在一条看似普通的老街巷中，通过现存37号、42号民居等历史建筑和街区微改造后的标识系统，理解明代广州“怀柔远人”的对外接待制度，以及怀远驿如何从江边驿站演变为远离江岸的历史街巷。"},
   look:[
     {t:{en:"怀远驿37号与42号民居",zh:"怀远驿37号与42号民居"}, d:{en:"现存历史建筑，可观察老街区民居的建筑风貌。",zh:"现存历史建筑，可观察老街区民居的建筑风貌。"}},
@@ -4427,13 +4294,12 @@ const TEAM_PLACES = [
   art:"tower", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏛", x:38.4, y:44,
   num:26, areaHint:"", zhOnly:true,
   time:"60–75 min", rating:0, booking:false,
-  one:{en:"国内首家可品尝滋味的活态粤菜博物馆，藏在西关百年老字号岭南庭院之中。 为什么要去：在这里不止观赏饮食文物，还能沉浸式读懂粤菜两千年演变，近距离观摩非遗烹饪技艺，感受广府“食味即文脉”的独特理念。",zh:"国内首家可品尝滋味的活态粤菜博物馆，藏在西关百年老字号岭南庭院之中。 为什么要去：在这里不止观赏饮食文物，还能沉浸式读懂粤菜两千年演变，近距离观摩非遗烹饪技艺，感受广府“食味即文脉”的独特理念。"},
-  why:{en:"国内首家可品尝滋味的活态粤菜博物馆，藏在西关百年老字号岭南庭院之中。 为什么要去：在这里不止观赏饮食文物，还能沉浸式读懂粤菜两千年演变，近距离观摩非遗烹饪技艺，感受广府“食味即文脉”的独特理念。",zh:"国内首家可品尝滋味的活态粤菜博物馆，藏在西关百年老字号岭南庭院之中。 为什么要去：在这里不止观赏饮食文物，还能沉浸式读懂粤菜两千年演变，近距离观摩非遗烹饪技艺，感受广府“食味即文脉”的独特理念。"},
+  one:{en:"国内首家可品尝滋味的活态粤菜博物馆，藏在西关百年老字号岭南庭院之中。",zh:"国内首家可品尝滋味的活态粤菜博物馆，藏在西关百年老字号岭南庭院之中。"},
+  why:{en:"在这里不止观赏饮食文物，还能沉浸式读懂粤菜两千年演变，近距离观摩非遗烹饪技艺，感受广府“食味即文脉”的独特理念。",zh:"在这里不止观赏饮食文物，还能沉浸式读懂粤菜两千年演变，近距离观摩非遗烹饪技艺，感受广府“食味即文脉”的独特理念。"},
   look:[
-    {t:{en:"粤菜文物展陈区",zh:"粤菜文物展陈区"}, d:{en:"展出古代饮食器具、清代馔盒等藏品，梳理粤菜发展脉络。",zh:"展出古代饮食器具、清代馔盒等藏品，梳理粤菜发展脉络。"}},
-    {t:{en:"岭南庭院建筑",zh:"岭南庭院建筑"}, d:{en:"保留文昌榕、满洲窗、天井园林，西关骑楼庭院风貌完整。",zh:"保留文昌榕、满洲窗、天井园林，西关骑楼庭院风貌完整。"}},
-    {t:{en:"非遗技艺现场演示",zh:"非遗技艺现场演示"}, d:{en:"可观看粤菜大师展示传统烹饪、点心制作技艺。",zh:"可观看粤菜大师展示传统烹饪、点心制作技艺。"}},
-    {t:{en:"复刻古宴席场景",zh:"复刻古宴席场景"}, d:{en:"复原南越王宴等古代宴席，窥见古时岭南饮食礼制。5. 相关活动：粤菜非遗研学、广府早茶文化体验、宴席文化分享活动；点心手作体验（需预约）。",zh:"复原南越王宴等古代宴席，窥见古时岭南饮食礼制。5. 相关活动：粤菜非遗研学、广府早茶文化体验、宴席文化分享活动；点心手作体验（需预约）。"}},
+  {t:{en:"粤菜文物展陈区",zh:"粤菜文物展陈区"}, d:{en:"展出古代饮食器具、清代馔盒等藏品，梳理粤菜发展脉络。",zh:"展出古代饮食器具、清代馔盒等藏品，梳理粤菜发展脉络。"}},
+  {t:{en:"岭南庭院建筑",zh:"岭南庭院建筑"}, d:{en:"保留文昌榕、满洲窗、天井园林，西关骑楼庭院风貌完整。",zh:"保留文昌榕、满洲窗、天井园林，西关骑楼庭院风貌完整。"}},
+  {t:{en:"非遗技艺现场演示",zh:"非遗技艺现场演示"}, d:{en:"可观看粤菜大师展示传统烹饪、点心制作技艺。",zh:"可观看粤菜大师展示传统烹饪、点心制作技艺。"}}
   ],
   confuse:[
     {q:{en:"外国游客疑惑，为什么博物馆可以吃饭，和普通博物馆不一样？",zh:"外国游客疑惑，为什么博物馆可以吃饭，和普通博物馆不一样？"}, a:{en:"这是一座“活态博物馆”，不以单纯静态文物陈列为主。粤菜文化根植于日常餐桌，因此将展陈、技艺演示与餐饮体验结合，让参观者通过味觉感知岭南饮食文明。",zh:"这是一座“活态博物馆”，不以单纯静态文物陈列为主。粤菜文化根植于日常餐桌，因此将展陈、技艺演示与餐饮体验结合，让参观者通过味觉感知岭南饮食文明。"}},
@@ -4441,7 +4307,7 @@ const TEAM_PLACES = [
   ],
   context:{en:"对比参考：美国美食博物馆、日本食文化博物馆、朝鲜传统饮食文化馆、澳大利亚本土食材展馆、法国美食遗产工坊、英国国家饮食历史展厅。这类场馆均用于记录本土饮食传统；但粤菜博物馆立足岭南海洋与农耕交融环境，强调“不时不食、和而不同”的饮食哲学，把宴席礼仪、市井早茶、非遗烹饪融为一体，与上述海外展馆在文化内核、体验形式上存在明显区别。 10. 英文疑惑 Why is this museum designed as a place where visitors can taste food? 为什么这座博物馆设计成可供游客品尝食物的场所？ It is a living museum of Cantonese cuisine. Cantonese food culture comes from daily life. Instead of only showing static relics, it combines exhibitions, craft demonstrations and dining, so visitors can understand Lingnan food culture through taste. 它是一座粤菜活态博物馆。粤菜文化源自日常生活，因此不只陈列静态文物，而是将展览、技艺展示与餐饮结合，让参观者通过味觉读懂岭南饮食文化。",zh:"对比参考：美国美食博物馆、日本食文化博物馆、朝鲜传统饮食文化馆、澳大利亚本土食材展馆、法国美食遗产工坊、英国国家饮食历史展厅。这类场馆均用于记录本土饮食传统；但粤菜博物馆立足岭南海洋与农耕交融环境，强调“不时不食、和而不同”的饮食哲学，把宴席礼仪、市井早茶、非遗烹饪融为一体，与上述海外展馆在文化内核、体验形式上存在明显区别。 10. 英文疑惑 Why is this museum designed as a place where visitors can taste food? 为什么这座博物馆设计成可供游客品尝食物的场所？ It is a living museum of Cantonese cuisine. Cantonese food culture comes from daily life. Instead of only showing static relics, it combines exhibitions, craft demonstrations and dining, so visitors can understand Lingnan food culture through taste. 它是一座粤菜活态博物馆。粤菜文化源自日常生活，因此不只陈列静态文物，而是将展览、技艺展示与餐饮结合，让参观者通过味觉读懂岭南饮食文化。"},
   exp:[{en:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。",zh:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。"}],
-  info:{address:{en:"广州市荔湾区文昌南路2号广州酒家文昌总店",zh:"广州市荔湾区文昌南路2号广州酒家文昌总店"}, hours:{en:"10:00–21:00，展馆与餐厅同步开放。",zh:"10:00–21:00，展馆与餐厅同步开放。"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
+  info:{address:{en:"广州市荔湾区文昌南路2号广州酒家文昌总店",zh:"广州市荔湾区文昌南路2号广州酒家文昌总店"}, hours:{en:"Tue-Sun 9:30-14:30, 17:00-19:30 (last entry 30 min before closing); closed Mondays",zh:"周二至周日 9:30-14:30、17:00-19:30（闭馆前 30 分钟停止入内），周一闭馆"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
         ticket:{en:"免费开放，无需预约",zh:"免费开放，无需预约"}, transport:{en:"",zh:""}},
   related:["xiguan-house","morning-tea"],
   next:{en:"下一站可以顺着走去「锦纶会馆（广州丝织行业博物馆）」。",zh:"下一站可以顺着走去「锦纶会馆（广州丝织行业博物馆）」。"},
@@ -4487,13 +4353,12 @@ const TEAM_PLACES = [
   art:"hill", hue:["#8C4A32","#D8AC5C","#3A2418"], em:"⛩", x:55.6, y:13.2,
   num:28, areaHint:"", zhOnly:true,
   time:"60–75 min", rating:0, booking:false,
-  one:{en:"藏在增埗河畔的民国园林建筑群，青砖红柱的中式庭院里曾藏着一座“小中山纪念堂”式的礼堂。",zh:"藏在增埗河畔的民国园林建筑群，青砖红柱的中式庭院里曾藏着一座“小中山纪念堂”式的礼堂。"},
-  why:{en:"可以在幽静的滨水园林中观赏一组保存完好的民国时期中西合璧建筑，观察青砖墙、红柱、琉璃瓦与西式拱券在同一空间中的融合手法，同时感受增埗河畔安静的市井水岸气息。",zh:"可以在幽静的滨水园林中观赏一组保存完好的民国时期中西合璧建筑，观察青砖墙、红柱、琉璃瓦与西式拱券在同一空间中的融合手法，同时感受增埗河畔安静的市井水岸气息。"},
+  one:{en:"藏在增埗河畔的民国园林建筑群（广州市文物保护单位），青砖红柱的中式庭院里曾藏着一座“小中山纪念堂”式的礼堂。",zh:"藏在增埗河畔的民国园林建筑群（广州市文物保护单位），青砖红柱的中式庭院里曾藏着一座“小中山纪念堂”式的礼堂。"},
+  why:{en:"可以在幽静的滨水公园中观赏一组经修缮后的民国时期中西合璧建筑，园内建筑独特风格，被誉为“中西合璧、南北融汇”的典范，感受增埗河畔安静的市井气息。",zh:"可以在幽静的滨水公园中观赏一组经修缮后的民国时期中西合璧建筑，园内建筑独特风格，被誉为“中西合璧、南北融汇”的典范，感受增埗河畔安静的市井气息。"},
   look:[
-    {t:{en:"对山园主体建筑群",zh:"对山园主体建筑群"}, d:{en:"青砖墙体、红柱、绿琉璃瓦的民国中式建筑，细节处融入西式拱券与线脚。",zh:"青砖墙体、红柱、绿琉璃瓦的民国中式建筑，细节处融入西式拱券与线脚。"}},
-    {t:{en:"园林庭院空间",zh:"园林庭院空间"}, d:{en:"前庭后院、廊道相连，保留民国园林的格局与植物。",zh:"前庭后院、廊道相连，保留民国园林的格局与植物。"}},
-    {t:{en:"增埗河滨水环境",zh:"增埗河滨水环境"}, d:{en:"建筑群临水而建，可结合河涌景观理解民国园林的选址逻辑。",zh:"建筑群临水而建，可结合河涌景观理解民国园林的选址逻辑。"}},
-    {t:{en:"建筑细部装饰",zh:"建筑细部装饰"}, d:{en:"檐下灰塑、窗楣装饰等体现广府工匠在民国时期的延续与变化。5. 相关活动：城市历史建筑研学、老广州建筑采风活动。",zh:"檐下灰塑、窗楣装饰等体现广府工匠在民国时期的延续与变化。5. 相关活动：城市历史建筑研学、老广州建筑采风活动。"}},
+  {t:{en:"对山园主体建筑群",zh:"对山园主体建筑群"}, d:{en:"青砖墙体、红柱、绿琉璃瓦的民国中式建筑，细节处融入西式拱券与线脚。",zh:"青砖墙体、红柱、绿琉璃瓦的民国中式建筑，细节处融入西式拱券与线脚。"}},
+  {t:{en:"园林庭院空间",zh:"园林庭院空间"}, d:{en:"前庭后院、廊道相连，保留民国园林的格局与植物。",zh:"前庭后院、廊道相连，保留民国园林的格局与植物。"}},
+  {t:{en:"增埗河滨水环境",zh:"增埗河滨水环境"}, d:{en:"建筑群临水而建，可结合河涌景观理解民国园林的选址逻辑。",zh:"建筑群临水而建，可结合河涌景观理解民国园林的选址逻辑。"}}
   ],
   confuse:[
     {q:{en:"游客看到青砖红柱的中式建筑，以为是一座传统祠堂或庙宇。",zh:"游客看到青砖红柱的中式建筑，以为是一座传统祠堂或庙宇。"}, a:{en:"对山园是民国时期建造的园林建筑群，虽然使用了青砖、琉璃瓦等传统材料，但整体布局和部分装饰手法受到西式建筑影响，属于民国时期“中西合璧”的建筑类型。",zh:"对山园是民国时期建造的园林建筑群，虽然使用了青砖、琉璃瓦等传统材料，但整体布局和部分装饰手法受到西式建筑影响，属于民国时期“中西合璧”的建筑类型。"}},
@@ -4501,7 +4366,7 @@ const TEAM_PLACES = [
   ],
   context:{en:"对比参考：美国镀金时代庄园园林、日本明治时期和洋折衷庭园、朝鲜日据时期近代建筑、澳大利亚殖民时期总督府园林、法国殖民时期印度支那风格建筑、英国维多利亚时期郊区别墅花园；该民国园林建筑内核有相似之处，但材料体系、装饰风格、选址逻辑、起源逻辑存在明显区别。",zh:"对比参考：美国镀金时代庄园园林、日本明治时期和洋折衷庭园、朝鲜日据时期近代建筑、澳大利亚殖民时期总督府园林、法国殖民时期印度支那风格建筑、英国维多利亚时期郊区别墅花园；该民国园林建筑内核有相似之处，但材料体系、装饰风格、选址逻辑、起源逻辑存在明显区别。"},
   exp:[{en:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。",zh:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。"}],
-  info:{address:{en:"广州市荔湾区西增路增埗公园内 二十九、珠江摄影学会工作室 资料很散也不合适 不要了",zh:"广州市荔湾区西增路增埗公园内 二十九、珠江摄影学会工作室 资料很散也不合适 不要了"}, hours:{en:"跟随公园开放时间，通常为6:00-22:00（以现场公告为准）（公园园区，建筑内部不常态化对外开放，仅可观赏外立面）。",zh:"跟随公园开放时间，通常为6:00-22:00（以现场公告为准）（公园园区，建筑内部不常态化对外开放，仅可观赏外立面）。"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
+  info:{address:{en:"No. 8 Fuzhou Road, Liwan District, Guangzhou",zh:"广州市荔湾区福州路 8 号"}, hours:{en:"6:30-21:30",zh:"6:30-21:30"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
         ticket:{en:"免费开放，无需预约",zh:"免费开放，无需预约"}, transport:{en:"",zh:""}},
   related:["xiguan-house"],
   next:{en:"下一站可以顺着走去「高剑父纪念馆·春睡画院」。",zh:"下一站可以顺着走去「高剑父纪念馆·春睡画院」。"},
@@ -4550,10 +4415,9 @@ const TEAM_PLACES = [
   one:{en:"藏身上下九闹市的千年禅宗祖庭，达摩东渡登陆的“西来初地”，在市井烟火里感受海上丝路的中印佛教文化遗存。",zh:"藏身上下九闹市的千年禅宗祖庭，达摩东渡登陆的“西来初地”，在市井烟火里感受海上丝路的中印佛教文化遗存。"},
   why:{en:"这里是禅宗初祖菩提达摩来华的第一处道场，是海上丝绸之路中外文化交流的实物见证。可以参观祖师殿、五百罗汉堂、汉白玉舍利塔，欣赏岭南寺院建筑与石雕艺术；逛完古寺还能顺走上下九、玉器街区，体会老广州“闹市藏古刹”的独特氛围。",zh:"这里是禅宗初祖菩提达摩来华的第一处道场，是海上丝绸之路中外文化交流的实物见证。可以参观祖师殿、五百罗汉堂、汉白玉舍利塔，欣赏岭南寺院建筑与石雕艺术；逛完古寺还能顺走上下九、玉器街区，体会老广州“闹市藏古刹”的独特氛围。"},
   look:[
-    {t:{en:"西来初地历史",zh:"西来初地历史"}, d:{en:"前身西来庵，相传达摩在此登岸结草为庵，是中国禅宗传播的起点，也是广州海上丝路重要印记。",zh:"前身西来庵，相传达摩在此登岸结草为庵，是中国禅宗传播的起点，也是广州海上丝路重要印记。"}},
-    {t:{en:"五百罗汉堂",zh:"五百罗汉堂"}, d:{en:"回廊式格局，供奉五百尊神态各异的罗汉塑像，是寺院的核心看点之一。",zh:"回廊式格局，供奉五百尊神态各异的罗汉塑像，是寺院的核心看点之一。"}},
-    {t:{en:"汉白玉舍利塔",zh:"汉白玉舍利塔"}, d:{en:"清代星岩白石建造，雕刻精美，历史上曾安放佛舍利，为镇寺之宝。",zh:"清代星岩白石建造，雕刻精美，历史上曾安放佛舍利，为镇寺之宝。"}},
-    {t:{en:"闹市古刹氛围",zh:"闹市古刹氛围"}, d:{en:"身处上下九商圈，寺外是玉器街与骑楼街巷，寺内梵音清静，古今市井与宗教文化在此交融。5. 相关活动：日常以朝拜、参观为主；农历初一、十五香火旺盛；佛教节庆会举办相关法会活动。",zh:"身处上下九商圈，寺外是玉器街与骑楼街巷，寺内梵音清静，古今市井与宗教文化在此交融。5. 相关活动：日常以朝拜、参观为主；农历初一、十五香火旺盛；佛教节庆会举办相关法会活动。"}},
+  {t:{en:"西来初地历史",zh:"西来初地历史"}, d:{en:"前身西来庵，相传达摩在此登岸结草为庵，是中国禅宗传播的起点，也是广州海上丝路重要印记。",zh:"前身西来庵，相传达摩在此登岸结草为庵，是中国禅宗传播的起点，也是广州海上丝路重要印记。"}},
+  {t:{en:"五百罗汉堂",zh:"五百罗汉堂"}, d:{en:"回廊式格局，供奉五百尊神态各异的罗汉塑像，是寺院的核心看点之一。",zh:"回廊式格局，供奉五百尊神态各异的罗汉塑像，是寺院的核心看点之一。"}},
+  {t:{en:"汉白玉舍利塔",zh:"汉白玉舍利塔"}, d:{en:"清代星岩白石建造，雕刻精美，历史上曾安放佛舍利，为镇寺之宝。",zh:"清代星岩白石建造，雕刻精美，历史上曾安放佛舍利，为镇寺之宝。"}}
   ],
   confuse:[
     {q:{en:"以为华林禅寺规模宏大，像大寺院一样大片园林。",zh:"以为华林禅寺规模宏大，像大寺院一样大片园林。"}, a:{en:"寺院坐落老城区，占地不算大，精华集中在殿堂、罗汉堂、舍利塔；它的价值重在禅宗历史地位，而非宏大园林规模。",zh:"寺院坐落老城区，占地不算大，精华集中在殿堂、罗汉堂、舍利塔；它的价值重在禅宗历史地位，而非宏大园林规模。"}},
@@ -4577,13 +4441,12 @@ const TEAM_PLACES = [
   art:"opera", hue:["#8C4A32","#D8AC5C","#3A2418"], em:"⛩", x:69.5, y:45.7,
   num:42, areaHint:"永庆坊", zhOnly:true,
   time:"60–75 min", rating:0, booking:false,
-  one:{en:"（吸睛版）：海内外粤剧艺人公认的行业“母会”，清末诞生的粤剧行会总部，扎根恩宁路骑楼老街，见证粤剧从本土走向全球华人世界的百年起落。",zh:"（吸睛版）：海内外粤剧艺人公认的行业“母会”，清末诞生的粤剧行会总部，扎根恩宁路骑楼老街，见证粤剧从本土走向全球华人世界的百年起落。"},
+  one:{en:"海内外粤剧艺人公认的行业“母会”，清末诞生的粤剧行会总部，扎根恩宁路骑楼老街，见证粤剧从本土走向全球华人世界的百年起落。",zh:"海内外粤剧艺人公认的行业“母会”，清末诞生的粤剧行会总部，扎根恩宁路骑楼老街，见证粤剧从本土走向全球华人世界的百年起落。"},
   why:{en:"它不只是一间老会馆，更是粤剧界的精神原点。清末粤剧艺人建立的同业组织，分堂对应不同行当，兼顾行规议事、艺人互助福利；薛觉先、马师曾、白雪仙等一代名伶都曾在此留下印记。逛完会馆，可串联永庆坊、粤剧艺术博物馆，在西关骑楼街巷里完整感受粤剧文化生态。",zh:"它不只是一间老会馆，更是粤剧界的精神原点。清末粤剧艺人建立的同业组织，分堂对应不同行当，兼顾行规议事、艺人互助福利；薛觉先、马师曾、白雪仙等一代名伶都曾在此留下印记。逛完会馆，可串联永庆坊、粤剧艺术博物馆，在西关骑楼街巷里完整感受粤剧文化生态。"},
   look:[
-    {t:{en:"“八和”精神",zh:"“八和”精神"}, d:{en:"八和寓意八个分堂同心和睦，不同行当各有所属，既是行业分工，也代表戏行团结互助的传统；会馆旧时还设置医疗、养老、后事安置等福利，关照底层艺人生活。",zh:"八和寓意八个分堂同心和睦，不同行当各有所属，既是行业分工，也代表戏行团结互助的传统；会馆旧时还设置医疗、养老、后事安置等福利，关照底层艺人生活。"}},
-    {t:{en:"百年行会历史",zh:"百年行会历史"}, d:{en:"1889年创立，原址黄沙，后遭损毁，1947年迁入恩宁路现址；这里是粤剧走向规范化的关键节点，海外众多八和分会均尊广州此址为母会。",zh:"1889年创立，原址黄沙，后遭损毁，1947年迁入恩宁路现址；这里是粤剧走向规范化的关键节点，海外众多八和分会均尊广州此址为母会。"}},
-    {t:{en:"西关骑楼会馆建筑",zh:"西关骑楼会馆建筑"}, d:{en:"骑楼式会馆建筑，身处恩宁路历史街区，老建筑与永庆坊新潮商业共生，适合感受“老戏行活化石”的现场氛围。",zh:"骑楼式会馆建筑，身处恩宁路历史街区，老建筑与永庆坊新潮商业共生，适合感受“老戏行活化石”的现场氛围。"}},
-    {t:{en:"粤剧文化动线",zh:"粤剧文化动线"}, d:{en:"和粤剧艺术博物馆、李小龙祖居、永庆坊街区连成一片，适合做粤剧主题citywalk。5. 相关活动：日常以参观为主；偶尔有粤剧分享、小型展演、文化导览；粤剧相关节庆会有主题活动。",zh:"和粤剧艺术博物馆、李小龙祖居、永庆坊街区连成一片，适合做粤剧主题citywalk。5. 相关活动：日常以参观为主；偶尔有粤剧分享、小型展演、文化导览；粤剧相关节庆会有主题活动。"}},
+  {t:{en:"“八和”精神",zh:"“八和”精神"}, d:{en:"八和寓意八个分堂同心和睦，不同行当各有所属，既是行业分工，也代表戏行团结互助的传统；会馆旧时还设置医疗、养老、后事安置等福利，关照底层艺人生活。",zh:"八和寓意八个分堂同心和睦，不同行当各有所属，既是行业分工，也代表戏行团结互助的传统；会馆旧时还设置医疗、养老、后事安置等福利，关照底层艺人生活。"}},
+  {t:{en:"百年行会历史",zh:"百年行会历史"}, d:{en:"1889年创立，原址黄沙，后遭损毁，1947年迁入恩宁路现址；这里是粤剧走向规范化的关键节点，海外众多八和分会均尊广州此址为母会。",zh:"1889年创立，原址黄沙，后遭损毁，1947年迁入恩宁路现址；这里是粤剧走向规范化的关键节点，海外众多八和分会均尊广州此址为母会。"}},
+  {t:{en:"西关骑楼会馆建筑",zh:"西关骑楼会馆建筑"}, d:{en:"骑楼式会馆建筑，身处恩宁路历史街区，老建筑与永庆坊新潮商业共生，适合感受“老戏行活化石”的现场氛围。",zh:"骑楼式会馆建筑，身处恩宁路历史街区，老建筑与永庆坊新潮商业共生，适合感受“老戏行活化石”的现场氛围。"}}
   ],
   confuse:[
     {q:{en:"以为这里是大型戏曲博物馆，会有大量完整戏服、大型舞台演出。",zh:"以为这里是大型戏曲博物馆，会有大量完整戏服、大型舞台演出。"}, a:{en:"它核心价值是行会历史、行业精神，场馆体量不大，不是大型剧场，重在读懂粤剧艺人的组织制度与历史脉络；想看大戏、大量展陈可以移步隔壁粤剧艺术博物馆。",zh:"它核心价值是行会历史、行业精神，场馆体量不大，不是大型剧场，重在读懂粤剧艺人的组织制度与历史脉络；想看大戏、大量展陈可以移步隔壁粤剧艺术博物馆。"}},
@@ -4591,7 +4454,7 @@ const TEAM_PLACES = [
   ],
   context:{en:"对比参考：美国华人戏曲社团、日本传统能乐歌舞伎同业行会、朝鲜传统戏曲艺人公会、澳大利亚华人粤剧曲艺社团、法国华人粤剧团体、英国华人戏曲协会。 海外的粤剧社团大多是华人移民之后建立的文化组织；而广州八和会馆是原生本土戏曲行业总部：清末就建立完整行会制度，既定行规、协调戏班业务，又办艺人养老医疗福利；之后随着粤剧移民出海，把这套“八和”行会精神带到美、澳、英、法等多国，形成全球网络。它和日本能乐、朝鲜戏曲的本土行会有相似之处，但又带有华侨向外扩散的独特传播路径。",zh:"对比参考：美国华人戏曲社团、日本传统能乐歌舞伎同业行会、朝鲜传统戏曲艺人公会、澳大利亚华人粤剧曲艺社团、法国华人粤剧团体、英国华人戏曲协会。 海外的粤剧社团大多是华人移民之后建立的文化组织；而广州八和会馆是原生本土戏曲行业总部：清末就建立完整行会制度，既定行规、协调戏班业务，又办艺人养老医疗福利；之后随着粤剧移民出海，把这套“八和”行会精神带到美、澳、英、法等多国，形成全球网络。它和日本能乐、朝鲜戏曲的本土行会有相似之处，但又带有华侨向外扩散的独特传播路径。"},
   exp:[{en:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。",zh:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。"}],
-  info:{address:{en:"广州市荔湾区恩宁路177号（永庆坊历史街区）",zh:"广州市荔湾区恩宁路177号（永庆坊历史街区）"}, hours:{en:"以现场公示为准；建议白天前往，搭配永庆坊一并游览。",zh:"以现场公示为准；建议白天前往，搭配永庆坊一并游览。"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
+  info:{address:{en:"广州市荔湾区恩宁路177号（永庆坊历史街区）",zh:"广州市荔湾区恩宁路177号（永庆坊历史街区）"}, hours:{en:"Usually closed to the public; open free of charge during internal rehearsals or performances",zh:"平时不对外开放；遇内部排练或开戏时可免费入内，具体以当天开放情况为准"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
         ticket:{en:"免费开放",zh:"免费开放"}, transport:{en:"",zh:""}},
   related:["cantonese-opera","yuequ-parks"],
   next:{en:"下一站可以顺着走去「历史悠久的店铺：皇上皇腊味店」。",zh:"下一站可以顺着走去「历史悠久的店铺：皇上皇腊味店」。"},
@@ -4669,10 +4532,9 @@ const TEAM_PLACES = [
   one:{en:"莲香楼始创于1889年，西关百年老字号茶楼，以广式莲蓉饼食与一盅两件早茶闻名，是广府饮食文化地标。",zh:"莲香楼始创于1889年，西关百年老字号茶楼，以广式莲蓉饼食与一盅两件早茶闻名，是广府饮食文化地标。"},
   why:{en:"完整保留传统西关茶楼空间风貌，饼食制作技艺代代传承，便于外籍访客沉浸式感受广府日常饮茶与饼食民俗。",zh:"完整保留传统西关茶楼空间风貌，饼食制作技艺代代传承，便于外籍访客沉浸式感受广府日常饮茶与饼食民俗。"},
   look:[
-    {t:{en:"复古茶楼厅堂",zh:"复古茶楼厅堂"}, d:{en:"保留满洲窗、木雕花饰，原汁原味的西关老茶楼空间",zh:"保留满洲窗、木雕花饰，原汁原味的西关老茶楼空间"}},
-    {t:{en:"饼食展示专柜",zh:"饼食展示专柜"}, d:{en:"展示百年莲蓉月饼、广式酥饼，可观看饼品手工制作展示",zh:"展示百年莲蓉月饼、广式酥饼，可观看饼品手工制作展示"}},
-    {t:{en:"历史图文展区",zh:"历史图文展区"}, d:{en:"陈列老照片、旧茶点菜单，记录茶楼百年变迁",zh:"陈列老照片、旧茶点菜单，记录茶楼百年变迁"}},
-    {t:{en:"伴手礼零售区",zh:"伴手礼零售区"}, d:{en:"莲蓉酥、鸡仔饼等广府传统手信5. 相关活动：中秋月饼文化分享会、广式点心体验课、老字号文化沙龙，定期举办广府饮食文化科普活动6. 是否需要预约：散客到店饮茶无需预约；点心体验课、文化沙龙需提前预约",zh:"莲蓉酥、鸡仔饼等广府传统手信5. 相关活动：中秋月饼文化分享会、广式点心体验课、老字号文化沙龙，定期举办广府饮食文化科普活动6. 是否需要预约：散客到店饮茶无需预约；点心体验课、文化沙龙需提前预约"}},
+  {t:{en:"复古茶楼厅堂",zh:"复古茶楼厅堂"}, d:{en:"保留满洲窗、木雕花饰，原汁原味的西关老茶楼空间",zh:"保留满洲窗、木雕花饰，原汁原味的西关老茶楼空间"}},
+  {t:{en:"饼食展示专柜",zh:"饼食展示专柜"}, d:{en:"展示百年莲蓉月饼、广式酥饼，可观看饼品手工制作展示",zh:"展示百年莲蓉月饼、广式酥饼，可观看饼品手工制作展示"}},
+  {t:{en:"历史图文展区",zh:"历史图文展区"}, d:{en:"陈列老照片、旧茶点菜单，记录茶楼百年变迁",zh:"陈列老照片、旧茶点菜单，记录茶楼百年变迁"}}
   ],
   confuse:[
     {q:{en:"外国访客疑惑，为什么本地人一大早就到茶楼喝茶吃点心，把早茶当作正餐。",zh:"外国访客疑惑，为什么本地人一大早就到茶楼喝茶吃点心，把早茶当作正餐。"}, a:{en:"“叹早茶”是广府延续百年的生活方式，早茶不只是吃饭，是街坊邻里闲谈社交的日常场景。",zh:"“叹早茶”是广府延续百年的生活方式，早茶不只是吃饭，是街坊邻里闲谈社交的日常场景。"}},
@@ -4699,10 +4561,9 @@ const TEAM_PLACES = [
   one:{en:"陶陶居始创于清光绪六年（1880年），西关百年中华老字号茶楼，康有为题写招牌，曾是文人雅士、商贾名流雅集之地，兼具广府饮茶、筵席、饼食手信多重功能。",zh:"陶陶居始创于清光绪六年（1880年），西关百年中华老字号茶楼，康有为题写招牌，曾是文人雅士、商贾名流雅集之地，兼具广府饮茶、筵席、饼食手信多重功能。"},
   why:{en:"总店经修缮保留民国时期建筑风貌，既有老西关茶楼的市井烟火，又承载近代广州文人社交历史，外籍访客可以同时感受建筑美学、一盅两件饮茶文化与老字号饼食传统。",zh:"总店经修缮保留民国时期建筑风貌，既有老西关茶楼的市井烟火，又承载近代广州文人社交历史，外籍访客可以同时感受建筑美学、一盅两件饮茶文化与老字号饼食传统。"},
   look:[
-    {t:{en:"百年建筑本体",zh:"百年建筑本体"}, d:{en:"第十甫路总店修缮后复原民国时期外观，骑楼立面、满洲窗、木雕花饰、可观亭等空间，西关建筑特色突出。",zh:"第十甫路总店修缮后复原民国时期外观，骑楼立面、满洲窗、木雕花饰、可观亭等空间，西关建筑特色突出。"}},
-    {t:{en:"历史图文展陈",zh:"历史图文展陈"}, d:{en:"店内陈列老照片、旧证照、历史资料，记录康有为题匾、鲁迅等文化名人到访的往事。",zh:"店内陈列老照片、旧证照、历史资料，记录康有为题匾、鲁迅等文化名人到访的往事。"}},
-    {t:{en:"经典茶点与饼食",zh:"经典茶点与饼食"}, d:{en:"可体验陶陶居大虾饺、酥皮水牛奶菠萝包等招牌；也可了解“陶陶居上月”月饼等传统饼食历史。",zh:"可体验陶陶居大虾饺、酥皮水牛奶菠萝包等招牌；也可了解“陶陶居上月”月饼等传统饼食历史。"}},
-    {t:{en:"手信零售区",zh:"手信零售区"}, d:{en:"售卖广式饼酥、月饼、礼盒等老字号伴手礼。5. 相关活动：老字号文化沙龙、中秋月饼文化分享、广府点心体验活动；节假日会举办粤曲欣赏、传统民俗游园等主题活动。6. 是否需要预约：散客饮茶建议到店取号；点心体验、文化沙龙等专题活动需要提前预约。",zh:"售卖广式饼酥、月饼、礼盒等老字号伴手礼。5. 相关活动：老字号文化沙龙、中秋月饼文化分享、广府点心体验活动；节假日会举办粤曲欣赏、传统民俗游园等主题活动。6. 是否需要预约：散客饮茶建议到店取号；点心体验、文化沙龙等专题活动需要提前预约。"}},
+  {t:{en:"百年建筑本体",zh:"百年建筑本体"}, d:{en:"第十甫路总店修缮后复原民国时期外观，骑楼立面、满洲窗、木雕花饰、可观亭等空间，西关建筑特色突出。",zh:"第十甫路总店修缮后复原民国时期外观，骑楼立面、满洲窗、木雕花饰、可观亭等空间，西关建筑特色突出。"}},
+  {t:{en:"历史图文展陈",zh:"历史图文展陈"}, d:{en:"店内陈列老照片、旧证照、历史资料，记录康有为题匾、鲁迅等文化名人到访的往事。",zh:"店内陈列老照片、旧证照、历史资料，记录康有为题匾、鲁迅等文化名人到访的往事。"}},
+  {t:{en:"经典茶点与饼食",zh:"经典茶点与饼食"}, d:{en:"可体验陶陶居大虾饺、酥皮水牛奶菠萝包等招牌；也可了解“陶陶居上月”月饼等传统饼食历史。",zh:"可体验陶陶居大虾饺、酥皮水牛奶菠萝包等招牌；也可了解“陶陶居上月”月饼等传统饼食历史。"}}
   ],
   confuse:[
     {q:{en:"外国访客疑惑，为什么一家茶楼会有文人墨客频繁到访。",zh:"外国访客疑惑，为什么一家茶楼会有文人墨客频繁到访。"}, a:{en:"晚清民国的广州茶楼不只是吃饭喝茶的地方，也是文人雅集、商贾聚会、信息交流的公共社交空间，陶陶居因为环境雅致，吸引不少文化名人前来品茗聚会。",zh:"晚清民国的广州茶楼不只是吃饭喝茶的地方，也是文人雅集、商贾聚会、信息交流的公共社交空间，陶陶居因为环境雅致，吸引不少文化名人前来品茗聚会。"}},
@@ -4729,10 +4590,9 @@ const TEAM_PLACES = [
   one:{en:"皇上皇是广州代表性腊味老字号，下九店坐落上下九传统商圈，主打广式腊肠、腊肉、腊味礼盒，承载岭南秋冬腊味食俗与广府手信文化。",zh:"皇上皇是广州代表性腊味老字号，下九店坐落上下九传统商圈，主打广式腊肠、腊肉、腊味礼盒，承载岭南秋冬腊味食俗与广府手信文化。"},
   why:{en:"门店位于西关老商圈，外籍访客可以直观认识广式腊味，了解“秋风起，食腊味”的民间习俗；既可以看腊味产品、听腊味饮食文化，也可以选购腊味礼盒作为广州特色伴手礼。",zh:"门店位于西关老商圈，外籍访客可以直观认识广式腊味，了解“秋风起，食腊味”的民间习俗；既可以看腊味产品、听腊味饮食文化，也可以选购腊味礼盒作为广州特色伴手礼。"},
   look:[
-    {t:{en:"腊味产品陈列",zh:"腊味产品陈列"}, d:{en:"二八腊肠、五花腊肉、蛋黄凤凰盏、腊味礼盒等，能看到不同肥瘦配比、不同风味的广式腊味。",zh:"二八腊肠、五花腊肉、蛋黄凤凰盏、腊味礼盒等，能看到不同肥瘦配比、不同风味的广式腊味。"}},
-    {t:{en:"手信礼盒专区",zh:"手信礼盒专区"}, d:{en:"适合游客带走的组合礼盒，体现广州旅行伴手礼文化。",zh:"适合游客带走的组合礼盒，体现广州旅行伴手礼文化。"}},
-    {t:{en:"老西关商圈氛围",zh:"老西关商圈氛围"}, d:{en:"地处上下九步行街一带，骑楼老街环境，和莲香楼、陶陶居等老字号形成连片的老广州商业图景。",zh:"地处上下九步行街一带，骑楼老街环境，和莲香楼、陶陶居等老字号形成连片的老广州商业图景。"}},
-    {t:{en:"腊味熟食小食",zh:"腊味熟食小食"}, d:{en:"店内也可体验腊味相关简餐，感受腊味入菜的日常吃法。5. 相关活动：秋冬腊味季会推出腊味主题市集、老字号消费打卡活动；节庆节点会推出礼盒套装、集章打卡等活动；部分时段有腊味文化科普，讲解广式腊味的选料、风味与节庆吃法。6. 是否需要预约：进店选购无需预约；如果参与专题打卡活动，按现场规则参与即可。",zh:"店内也可体验腊味相关简餐，感受腊味入菜的日常吃法。5. 相关活动：秋冬腊味季会推出腊味主题市集、老字号消费打卡活动；节庆节点会推出礼盒套装、集章打卡等活动；部分时段有腊味文化科普，讲解广式腊味的选料、风味与节庆吃法。6. 是否需要预约：进店选购无需预约；如果参与专题打卡活动，按现场规则参与即可。"}},
+  {t:{en:"腊味产品陈列",zh:"腊味产品陈列"}, d:{en:"二八腊肠、五花腊肉、蛋黄凤凰盏、腊味礼盒等，能看到不同肥瘦配比、不同风味的广式腊味。",zh:"二八腊肠、五花腊肉、蛋黄凤凰盏、腊味礼盒等，能看到不同肥瘦配比、不同风味的广式腊味。"}},
+  {t:{en:"手信礼盒专区",zh:"手信礼盒专区"}, d:{en:"适合游客带走的组合礼盒，体现广州旅行伴手礼文化。",zh:"适合游客带走的组合礼盒，体现广州旅行伴手礼文化。"}},
+  {t:{en:"老西关商圈氛围",zh:"老西关商圈氛围"}, d:{en:"地处上下九步行街一带，骑楼老街环境，和莲香楼、陶陶居等老字号形成连片的老广州商业图景。",zh:"地处上下九步行街一带，骑楼老街环境，和莲香楼、陶陶居等老字号形成连片的老广州商业图景。"}}
   ],
   confuse:[
     {q:{en:"外国访客疑惑，为什么广东人秋天冬天要吃腊肠腊肉。",zh:"外国访客疑惑，为什么广东人秋天冬天要吃腊肠腊肉。"}, a:{en:"广东民间有“秋风起，食腊味”的说法，秋冬干爽天气适合腊味风干制作；腊味既是家常食材，也是过年送礼、家宴的重要食物，是岭南秋冬饮食民俗。",zh:"广东民间有“秋风起，食腊味”的说法，秋冬干爽天气适合腊味风干制作；腊味既是家常食材，也是过年送礼、家宴的重要食物，是岭南秋冬饮食民俗。"}},
@@ -4819,9 +4679,8 @@ const TEAM_PLACES = [
   one:{en:"黄宝坚碉楼建于民国时期，西关罕见的防御型民居碉楼，融合岭南民居与防御工事特色。",zh:"黄宝坚碉楼建于民国时期，西关罕见的防御型民居碉楼，融合岭南民居与防御工事特色。"},
   why:{en:"是西关为数不多的碉楼建筑，能让访客了解民国时期岭南民间安防建筑特色，补充广府民居多元形态认知。",zh:"是西关为数不多的碉楼建筑，能让访客了解民国时期岭南民间安防建筑特色，补充广府民居多元形态认知。"},
   look:[
-    {t:{en:"碉楼主体",zh:"碉楼主体"}, d:{en:"砖石结构高楼，瞭望射击孔、厚重墙体，突出防御功能",zh:"砖石结构高楼，瞭望射击孔、厚重墙体，突出防御功能"}},
-    {t:{en:"民居细节",zh:"民居细节"}, d:{en:"窗花、趟栊门等西关传统民居构件，中西建筑元素融合",zh:"窗花、趟栊门等西关传统民居构件，中西建筑元素融合"}},
-    {t:{en:"建筑史料",zh:"建筑史料"}, d:{en:"展示碉楼建造背景、民国西关社会环境资料5. 相关活动：岭南民居建筑科普导赏、西关建筑文化分享会6. 是否需要预约：外部参观无需预约；内部建筑导赏活动需预约",zh:"展示碉楼建造背景、民国西关社会环境资料5. 相关活动：岭南民居建筑科普导赏、西关建筑文化分享会6. 是否需要预约：外部参观无需预约；内部建筑导赏活动需预约"}},
+  {t:{en:"碉楼主体",zh:"碉楼主体"}, d:{en:"砖石结构高楼，瞭望射击孔、厚重墙体，突出防御功能",zh:"砖石结构高楼，瞭望射击孔、厚重墙体，突出防御功能"}},
+  {t:{en:"民居细节",zh:"民居细节"}, d:{en:"窗花、趟栊门等西关传统民居构件，中西建筑元素融合",zh:"窗花、趟栊门等西关传统民居构件，中西建筑元素融合"}}
   ],
   confuse:[
     {q:{en:"外国访客疑惑，为什么城市里面会建造类似堡垒的楼房。",zh:"外国访客疑惑，为什么城市里面会建造类似堡垒的楼房。"}, a:{en:"民国时期社会治安不稳，富商建造碉楼，墙体厚实、开设瞭望孔，用来保护家人与财产安全。",zh:"民国时期社会治安不稳，富商建造碉楼，墙体厚实、开设瞭望孔，用来保护家人与财产安全。"}},
@@ -4875,10 +4734,10 @@ const TEAM_PLACES = [
   art:"tower", hue:["#A8442F","#D9A64B","#4A2A1E"], em:"🏛", x:47.9, y:49.1,
   num:52, areaHint:"", zhOnly:true,
   time:"60–75 min", rating:0, booking:false,
-  one:{en:"广州铁路博物馆依托旧广州南站旧址改造而成，华南地区重要铁路主题博物馆，见证广州近代铁路发展。",zh:"广州铁路博物馆依托旧广州南站旧址改造而成，华南地区重要铁路主题博物馆，见证广州近代铁路发展。"},
+  one:{en:"广州铁路博物馆依托百年黄沙车站（旧广州南站）旧址改造而成，华南地区重要铁路主题博物馆，见证广州近代铁路发展。",zh:"广州铁路博物馆依托百年黄沙车站（旧广州南站）旧址改造而成，华南地区重要铁路主题博物馆，见证广州近代铁路发展。"},
   why:{en:"原址为百年铁路车站，保留老站台、机车实物，外籍访客可以通过铁路遗存读懂近代华南交通对外开放历史。",zh:"原址为百年铁路车站，保留老站台、机车实物，外籍访客可以通过铁路遗存读懂近代华南交通对外开放历史。"},
   look:[
-    {t:{en:"百年车站旧址",zh:"百年车站旧址"}, d:{en:"原广三铁路石围塘车站历史建筑",zh:"原广三铁路石围塘车站历史建筑"}},
+    {t:{en:"原粤汉铁路黄沙车站历史建筑",zh:"原粤汉铁路黄沙车站历史建筑"}, d:{en:"原广三铁路石围塘车站历史建筑",zh:"原广三铁路石围塘车站历史建筑"}},
     {t:{en:"实体机车车厢",zh:"实体机车车厢"}, d:{en:"老式蒸汽机车、内燃机车、复古客车车厢可近距离观赏",zh:"老式蒸汽机车、内燃机车、复古客车车厢可近距离观赏"}},
     {t:{en:"铁路史料展厅",zh:"铁路史料展厅"}, d:{en:"老照片、车票、工具，展示华南铁路百年发展史",zh:"老照片、车票、工具，展示华南铁路百年发展史"}},
     {t:{en:"室外站台遗址",zh:"室外站台遗址"}, d:{en:"保留旧铁轨、月台，还原老火车站场景5. 相关活动：铁路文化研学、机车科普讲解、铁路怀旧主题展览6. 是否需要预约：免费参观，无需预约",zh:"保留旧铁轨、月台，还原老火车站场景5. 相关活动：铁路文化研学、机车科普讲解、铁路怀旧主题展览6. 是否需要预约：免费参观，无需预约"}},
@@ -4890,13 +4749,13 @@ const TEAM_PLACES = [
   context:{en:"对比参考：英国国家铁路博物馆、美国铁路历史博物馆、日本铁道博物馆、澳大利亚蒸汽火车展馆、法国铁路博物馆、朝鲜铁路纪念馆。海外铁路博物馆很多以蒸汽机车技术展示为主；广州铁路博物馆同时兼顾车站建筑遗产，展现铁路带动岭南城乡商贸开放的历史。",zh:"对比参考：英国国家铁路博物馆、美国铁路历史博物馆、日本铁道博物馆、澳大利亚蒸汽火车展馆、法国铁路博物馆、朝鲜铁路纪念馆。海外铁路博物馆很多以蒸汽机车技术展示为主；广州铁路博物馆同时兼顾车站建筑遗产，展现铁路带动岭南城乡商贸开放的历史。"},
   exp:[{en:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。",zh:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。"}],
   info:{address:{en:"广州市荔湾区黄沙大道誉江路3号",zh:"广州市荔湾区黄沙大道誉江路3号"}, hours:{en:"周一闭馆，9:00-17:00（16:00停止入馆）",zh:"周一闭馆，9:00-17:00（16:00停止入馆）"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
-        ticket:{en:"以现场公告为准",zh:"以现场公告为准"}, transport:{en:"",zh:""}},
+        ticket:{en:"Free, no booking needed",zh:"免预约，免费开放"}, transport:{en:"",zh:""}},
   related:[],
   next:{en:"下一站可以顺着走去「吥吱·BUZI手工皮具DIY课堂」。",zh:"下一站可以顺着走去「吥吱·BUZI手工皮具DIY课堂」。"},
   source:{en:"内容：项目团队实地整理（严思宇）；英文版本待译。",zh:"内容：项目团队实地整理（严思宇）；英文版本待译。"},
   qa:{en:"What historical value does this old railway station have?", enA:"This former railway station belongs to Guangdong’s earliest railway. It witnessed the start of industrialization and transportation development in Lingnan region.", zhQ:"（这座老火车站有什么历史价值？）", zhA:"这座旧车站属于广东最早的铁路，见证了岭南地区工业化与交通发展的开端。"},
   onsite:[
-    {prompt:{en:"抬起头看：百年车站旧址",zh:"抬起头看：百年车站旧址"}, look:{en:"原广三铁路石围塘车站历史建筑",zh:"原广三铁路石围塘车站历史建筑"}, q:{en:"外国访客疑惑，为什么废弃火车站被改造成博物馆，而不是拆除重建。",zh:"外国访客疑惑，为什么废弃火车站被改造成博物馆，而不是拆除重建。"}, a:{en:"老车站属于工业遗产，具有历史价值，广州采用活化保护方式，保留原有站台建筑，改造为科普博物馆。",zh:"老车站属于工业遗产，具有历史价值，广州采用活化保护方式，保留原有站台建筑，改造为科普博物馆。"}},
+    {prompt:{en:"抬起头看：原粤汉铁路黄沙车站历史建筑",zh:"抬起头看：原粤汉铁路黄沙车站历史建筑"}, look:{en:"原广三铁路石围塘车站历史建筑",zh:"原广三铁路石围塘车站历史建筑"}, q:{en:"外国访客疑惑，为什么废弃火车站被改造成博物馆，而不是拆除重建。",zh:"外国访客疑惑，为什么废弃火车站被改造成博物馆，而不是拆除重建。"}, a:{en:"老车站属于工业遗产，具有历史价值，广州采用活化保护方式，保留原有站台建筑，改造为科普博物馆。",zh:"老车站属于工业遗产，具有历史价值，广州采用活化保护方式，保留原有站台建筑，改造为科普博物馆。"}},
     {prompt:{en:"抬起头看：实体机车车厢",zh:"抬起头看：实体机车车厢"}, look:{en:"老式蒸汽机车、内燃机车、复古客车车厢可近距离观赏",zh:"老式蒸汽机车、内燃机车、复古客车车厢可近距离观赏"}, q:{en:"疑惑广三铁路的意义是什么。",zh:"疑惑广三铁路的意义是什么。"}, a:{en:"广三铁路是广东最早的铁路之一，推动近代广州和珠三角城乡物资流通，是岭南近代工业化开端标志之一。",zh:"广三铁路是广东最早的铁路之一，推动近代广州和珠三角城乡物资流通，是岭南近代工业化开端标志之一。"}},
   ]
 },
@@ -4938,10 +4797,9 @@ const TEAM_PLACES = [
   one:{en:"永庆大戏台坐落永庆坊内，西关开放式户外粤剧演出戏台，是粤剧非遗常态化惠民演出空间。",zh:"永庆大戏台坐落永庆坊内，西关开放式户外粤剧演出戏台，是粤剧非遗常态化惠民演出空间。"},
   why:{en:"开放式露天戏台，近距离观赏粤剧折子戏，感受岭南戏曲扎根市井的活态传承，非常适合外国游客沉浸式体验。",zh:"开放式露天戏台，近距离观赏粤剧折子戏，感受岭南戏曲扎根市井的活态传承，非常适合外国游客沉浸式体验。"},
   look:[
-    {t:{en:"岭南仿古戏台",zh:"岭南仿古戏台"}, d:{en:"传统木构戏台，满洲窗、广府雕花，典型西关戏台风貌",zh:"传统木构戏台，满洲窗、广府雕花，典型西关戏台风貌"}},
-    {t:{en:"户外观演空间",zh:"户外观演空间"}, d:{en:"开放式广场，街坊游客一同看戏，充满市井氛围",zh:"开放式广场，街坊游客一同看戏，充满市井氛围"}},
-    {t:{en:"粤剧小型展演",zh:"粤剧小型展演"}, d:{en:"折子戏、粤曲对唱等短小节目，适合短时游览观看",zh:"折子戏、粤曲对唱等短小节目，适合短时游览观看"}},
-    {t:{en:"周边配套",zh:"周边配套"}, d:{en:"紧邻永庆坊非遗工坊，看完戏可以顺路参观手作5. 相关活动：周末粤曲惠民演出、粤剧快闪、粤曲传唱体验、戏曲服饰打卡活动6. 是否需要预约：露天观演免费，无需预约；专场活动按要求预约",zh:"紧邻永庆坊非遗工坊，看完戏可以顺路参观手作5. 相关活动：周末粤曲惠民演出、粤剧快闪、粤曲传唱体验、戏曲服饰打卡活动6. 是否需要预约：露天观演免费，无需预约；专场活动按要求预约"}},
+  {t:{en:"岭南仿古戏台",zh:"岭南仿古戏台"}, d:{en:"传统木构戏台，满洲窗、广府雕花，典型西关戏台风貌",zh:"传统木构戏台，满洲窗、广府雕花，典型西关戏台风貌"}},
+  {t:{en:"户外观演空间",zh:"户外观演空间"}, d:{en:"开放式广场，街坊游客一同看戏，充满市井氛围",zh:"开放式广场，街坊游客一同看戏，充满市井氛围"}},
+  {t:{en:"粤剧小型展演",zh:"粤剧小型展演"}, d:{en:"折子戏、粤曲对唱等短小节目，适合短时游览观看",zh:"折子戏、粤曲对唱等短小节目，适合短时游览观看"}}
   ],
   confuse:[
     {q:{en:"外国访客疑惑，戏曲演出为什么在露天广场而不是封闭剧院。",zh:"外国访客疑惑，戏曲演出为什么在露天广场而不是封闭剧院。"}, a:{en:"粤剧最早就诞生于市井乡野戏台，在街头露天表演是岭南戏曲传统，让普通市民免费欣赏，保留市井烟火气。",zh:"粤剧最早就诞生于市井乡野戏台，在街头露天表演是岭南戏曲传统，让普通市民免费欣赏，保留市井烟火气。"}},
@@ -4949,8 +4807,8 @@ const TEAM_PLACES = [
   ],
   context:{en:"对比参考：英国街头戏剧舞台、日本能乐露天戏台、朝鲜传统民间戏台、澳大利亚户外戏剧场、法国街头歌剧、英国莎士比亚露天剧场。海外露天戏剧场地多为节庆临时搭建；岭南古戏台长期固定在社区，戏曲融入本地人日常休闲生活。",zh:"对比参考：英国街头戏剧舞台、日本能乐露天戏台、朝鲜传统民间戏台、澳大利亚户外戏剧场、法国街头歌剧、英国莎士比亚露天剧场。海外露天戏剧场地多为节庆临时搭建；岭南古戏台长期固定在社区，戏曲融入本地人日常休闲生活。"},
   exp:[{en:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。",zh:"现场自由参观，按场馆动线逐处慢看（具体以场馆公告为准）。"}],
-  info:{address:{en:"广州市荔湾区恩宁路永庆坊内",zh:"广州市荔湾区恩宁路永庆坊内"}, hours:{en:"全天场地开放；粤剧演出多安排在周末下午、晚间场次",zh:"全天场地开放；粤剧演出多安排在周末下午、晚间场次"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
-        ticket:{en:"以现场公告为准",zh:"以现场公告为准"}, transport:{en:"",zh:""}},
+  info:{address:{en:"广州市荔湾区恩宁路永庆坊内",zh:"广州市荔湾区恩宁路永庆坊内"}, hours:{en:"Performances usually 10:30 / 15:00 / 19:30; closed Mondays",zh:"演出时间：一般 10:30 / 15:00 / 19:30 三场，周一闭馆"}, verified:{en:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。",zh:"内容由项目团队实地整理（2026-10）；英文待译；开放时间与票务请以现场公告为准。"},
+        ticket:{en:"Free, no booking needed",zh:"免费开放，无需预约"}, transport:{en:"",zh:""}},
   related:["cantonese-opera","yuequ-parks"],
   next:{en:"下一站可以顺着走去「光孝寺」。",zh:"下一站可以顺着走去「光孝寺」。"},
   source:{en:"内容：项目团队实地整理（严思宇）；英文版本待译。",zh:"内容：项目团队实地整理（严思宇）；英文版本待译。"},
@@ -4968,10 +4826,9 @@ const TEAM_PLACES = [
   one:{en:"珠江钢琴创梦园由旧钢琴厂房改造，聚集多个广府非遗工作室，是工业遗存活化+非遗手作的复合型文化空间。",zh:"珠江钢琴创梦园由旧钢琴厂房改造，聚集多个广府非遗工作室，是工业遗存活化+非遗手作的复合型文化空间。"},
   why:{en:"旧厂房改造的文创园区，可一次性探访多个非遗车间，外籍访客能够现场观摩广彩、玉雕等非遗手工制作全过程。",zh:"旧厂房改造的文创园区，可一次性探访多个非遗车间，外籍访客能够现场观摩广彩、玉雕等非遗手工制作全过程。"},
   look:[
-    {t:{en:"旧工业厂房空间",zh:"旧工业厂房空间"}, d:{en:"保留原钢琴生产车间结构，旧机床、管道等工业遗迹",zh:"保留原钢琴生产车间结构，旧机床、管道等工业遗迹"}},
-    {t:{en:"多门类非遗工作室",zh:"多门类非遗工作室"}, d:{en:"广彩、玉雕、广绣等非遗车间，可以观摩匠人实操",zh:"广彩、玉雕、广绣等非遗车间，可以观摩匠人实操"}},
-    {t:{en:"文创展厅",zh:"文创展厅"}, d:{en:"非遗作品、工业遗产主题展览",zh:"非遗作品、工业遗产主题展览"}},
-    {t:{en:"手作体验区",zh:"手作体验区"}, d:{en:"游客可以报名简易非遗手工体验5. 相关活动：非遗开放日、匠人现场展演、手工体验课、非遗作品主题展览6. 是否需要预约：免费开放，园区自由参观无需预约；匠人体验课、专场展演需要提前预约",zh:"游客可以报名简易非遗手工体验5. 相关活动：非遗开放日、匠人现场展演、手工体验课、非遗作品主题展览6. 是否需要预约：免费开放，园区自由参观无需预约；匠人体验课、专场展演需要提前预约"}},
+  {t:{en:"旧工业厂房空间",zh:"旧工业厂房空间"}, d:{en:"保留原钢琴生产车间结构，旧机床、管道等工业遗迹",zh:"保留原钢琴生产车间结构，旧机床、管道等工业遗迹"}},
+  {t:{en:"多门类非遗工作室",zh:"多门类非遗工作室"}, d:{en:"广彩、玉雕、广绣等非遗车间，可以观摩匠人实操",zh:"广彩、玉雕、广绣等非遗车间，可以观摩匠人实操"}},
+  {t:{en:"文创展厅",zh:"文创展厅"}, d:{en:"非遗作品、工业遗产主题展览",zh:"非遗作品、工业遗产主题展览"}}
   ],
   confuse:[
     {q:{en:"外国访客疑惑，为什么旧钢琴工厂被改成非遗手作聚集地。",zh:"外国访客疑惑，为什么旧钢琴工厂被改成非遗手作聚集地。"}, a:{en:"属于工业遗产活化项目，闲置老厂房空间宽敞，租金友好，用来扶持本土非遗匠人，让传统手艺在现代园区传承。",zh:"属于工业遗产活化项目，闲置老厂房空间宽敞，租金友好，用来扶持本土非遗匠人，让传统手艺在现代园区传承。"}},
@@ -4998,10 +4855,9 @@ const TEAM_PLACES = [
   one:{en:"吴财记面家始创1953年，深藏西关小巷的老字号云吞面店，是广式竹升面非遗技艺传承点位。",zh:"吴财记面家始创1953年，深藏西关小巷的老字号云吞面店，是广式竹升面非遗技艺传承点位。"},
   why:{en:"藏身老巷保留地道市井面档风貌，外籍访客可以品尝手工竹升面与鲜虾云吞，直观感受老广日常街头饮食文化。",zh:"藏身老巷保留地道市井面档风貌，外籍访客可以品尝手工竹升面与鲜虾云吞，直观感受老广日常街头饮食文化。"},
   look:[
-    {t:{en:"手工竹升面",zh:"手工竹升面"}, d:{en:"传统工艺压制银丝细面，弹牙爽口，可了解竹升面制作原理",zh:"传统工艺压制银丝细面，弹牙爽口，可了解竹升面制作原理"}},
-    {t:{en:"招牌云吞",zh:"招牌云吞"}, d:{en:"鲜虾炸云吞、净云吞，皮薄馅鲜，是广府面食代表",zh:"鲜虾炸云吞、净云吞，皮薄馅鲜，是广府面食代表"}},
-    {t:{en:"老店空间",zh:"老店空间"}, d:{en:"巷内老式面家格局，墙面留存媒体报道史料，充满西关烟火气息",zh:"巷内老式面家格局，墙面留存媒体报道史料，充满西关烟火气息"}},
-    {t:{en:"经典面食",zh:"经典面食"}, d:{en:"牛腩捞面等特色出品，感受广府面食搭配思路5. 相关活动：广式竹升面文化分享、面食制作体验活动（不定期）6. 是否需要预约：进店用餐无需预约，饭点排队；手工体验活动需提前预约",zh:"牛腩捞面等特色出品，感受广府面食搭配思路5. 相关活动：广式竹升面文化分享、面食制作体验活动（不定期）6. 是否需要预约：进店用餐无需预约，饭点排队；手工体验活动需提前预约"}},
+  {t:{en:"手工竹升面",zh:"手工竹升面"}, d:{en:"传统工艺压制银丝细面，弹牙爽口，可了解竹升面制作原理",zh:"传统工艺压制银丝细面，弹牙爽口，可了解竹升面制作原理"}},
+  {t:{en:"招牌云吞",zh:"招牌云吞"}, d:{en:"鲜虾炸云吞、净云吞，皮薄馅鲜，是广府面食代表",zh:"鲜虾炸云吞、净云吞，皮薄馅鲜，是广府面食代表"}},
+  {t:{en:"老店空间",zh:"老店空间"}, d:{en:"巷内老式面家格局，墙面留存媒体报道史料，充满西关烟火气息",zh:"巷内老式面家格局，墙面留存媒体报道史料，充满西关烟火气息"}}
   ],
   confuse:[
     {q:{en:"外国访客疑惑，为什么面条要用竹竿踩踏制作。",zh:"外国访客疑惑，为什么面条要用竹竿踩踏制作。"}, a:{en:"竹升面以竹竿压面团，令面筋紧实，面条口感爽滑弹韧，是岭南独有的传统制面古法。",zh:"竹升面以竹竿压面团，令面筋紧实，面条口感爽滑弹韧，是岭南独有的传统制面古法。"}},

@@ -56,7 +56,7 @@ body{
   overflow:hidden;
 }
 body::after{
-  content:"译见岭南 · Interpret Lingnan — Cultural Discovery of Lingnan. Prototype v3.1 · Liwan & Yuexiu, Guangzhou";
+  content:"译见岭南 · Interpret Lingnan — Cultural Discovery of Lingnan. Prototype v3.5 · Liwan & Yuexiu, Guangzhou";
   position:fixed;left:0;right:0;bottom:14px;text-align:center;
   font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.22);
   pointer-events:none;
@@ -486,7 +486,7 @@ h3.title{font-size:16.5px;line-height:1.3;font-weight:700;letter-spacing:-.012em
 /* ============================================================
    11. Map
    ============================================================ */
-.mapwrap{position:absolute;inset:0;overflow:hidden;background:#E9E4D9;touch-action:none;-webkit-user-select:none;user-select:none}
+.mapwrap{position:absolute;inset:0;overflow:hidden;background:#E9E4D9;touch-action:auto;-webkit-user-select:none;user-select:none}
 .mapsvg{position:absolute;inset:0;width:100%;height:100%;display:block}
 /* 缩放到 1.8× 以上才显示点位图标，避免未放大时糊成一团 */
 .mapsvg .mk text{opacity:0;transition:opacity .15s}
@@ -979,6 +979,28 @@ html[lang="zh-HK"] .sect-head h2{
   letter-spacing:.005em;
 }
 
+
+/* v3.5: independent map and native horizontal touch surfaces. */
+.mapsvg{touch-action:none}
+.map-bottom,.map-overlay-top{touch-action:auto}
+.strip,.map-filters{touch-action:pan-x;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.strip{scroll-padding-inline:14px}
+.strip .mini{user-select:none;-webkit-user-select:none}
+.strip-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 14px 4px}
+.strip-controls button{width:44px;height:44px;border-radius:50%;background:var(--paper,#F7F3EB);box-shadow:0 2px 8px #13121018;font-size:27px;text-align:center;line-height:1}
+.strip-controls span{font-size:11px;color:var(--ink-3);background:#f7f3ebee;border-radius:20px;padding:6px 10px}
+.guide-entry{display:flex;align-items:center;gap:12px;margin:14px 20px 0;padding:14px;width:calc(100% - 40px);border:1px solid #16494b25;border-radius:16px;background:#edf1eb}
+.guide-entry .guide-icon{width:36px;height:36px;display:grid;place-items:center;background:#16494b;border-radius:12px;color:#fff;font-size:19px;flex-shrink:0}
+.guide-entry b{display:block;font-size:14px;color:#16494b}
+.guide-entry small{display:block;margin-top:4px;color:var(--muted);font-size:11px;line-height:1.5}
+.guide-entry .chev{margin-left:auto;flex-shrink:0}
+.guide-intro{padding:78px 20px 18px;background:#edf1eb;margin-bottom:18px}
+.guide-intro p{font-size:13px;line-height:1.7;color:var(--ink-3);margin:8px 0 0}
+.guide-card{margin:12px 20px;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.guide-card h2{font-size:17px;margin:0 0 8px;line-height:1.5}
+.guide-card p{font-size:13px;line-height:1.75;color:var(--ink-3);margin:0 0 14px}
+.guide-card .btn{min-height:44px}
+
 </style>
 </head>
 
@@ -1168,8 +1190,8 @@ const UI = {
     aboutText:"A product prototype for the Lingnan Culture digital experience platform. Scope: Guangzhou old town (Liwan & Yuexiu). Built to test one hypothesis — that international visitors need cultural interpretation, not another map.",
     credits:"Sources & credits",
     creditsText:"Cultural content drafted by the project content team and reviewed by a native English editor; terminology follows our locked glossary. Watercolor illustrations were supplied by the project owner and are embedded in this prototype.",
-    version:"Prototype v3.2 · 2026-11-04",
-    whatsNew:"What’s new in v3.1",
+    version:"Prototype v3.5 · 2026-11-07",
+    whatsNew:"What’s new in v3.5",
     comingSoon:"is planned for V2. English and 中文 are live now.",
     saved:"Saved", removed:"Removed",
     booked:"Request sent. We’ll reply within 2 working days.",
@@ -1342,8 +1364,8 @@ const UI = {
     aboutText:"岭南文化数字体验平台的产品原型。范围：广州老城（荔湾 & 越秀）。用来验证一个假设——国际用户需要的不是又一张地图，而是文化解释。",
     credits:"来源与声明",
     creditsText:"文化内容由项目内容团队撰写，英文经母语编辑审校；术语遵循已锁定术语库。水墨插画由项目方提供，并已内嵌于原型中。",
-    version:"原型 v3.1 · 2026-10-26",
-    whatsNew:"v3.1 更新内容",
+    version:"原型 v3.5 · 2026-11-07",
+    whatsNew:"v3.5 更新内容",
     comingSoon:"将在 V2 提供。当前已实现 English 与中文。",
     saved:"已收藏", removed:"已取消收藏",
     booked:"已收到你的请求，我们会在 2 个工作日内回复。",
@@ -1794,6 +1816,96 @@ const STORIES = [
 /* ==================================================================
    Part B: places, cultural routes, art motifs, profile options
    ================================================================== */
+
+/* v3.3 · Lingnan Explained editorial archive. New articles append here without changing the v3.3 series version. */
+const EDITORIAL_ARTICLES = {
+  "xiguan-house": {
+    "id": "IL-CULTURE-001",
+    "status": "editorial-draft",
+    "sources": [
+      {
+        "name": "广州市荔湾区人民政府｜西关大屋——岭南民居建筑的瑰宝",
+        "url": "https://www.lw.gov.cn/zjlw/tslw/content/post_7043849.html"
+      },
+      {
+        "name": "广州市地方志办公室｜广州的传统民居",
+        "url": "https://www.gzsqw.org.cn/c/sdfzpc/gfwh/2835.jhtml"
+      },
+      {
+        "name": "广州日报｜大屋深深韵流长 西关小姐气自华",
+        "url": "https://gzdaily.dayoo.com/h5/html5/2024-07/10/content_875_863137.htm"
+      }
+    ],
+    "zh": {
+      "title": "一门藏风雅，深巷见西关：读懂西关大屋里的广府生活智慧",
+      "subtitle": "译见岭南 · 中文文化科普 · 第01期",
+      "sections": [
+        [
+          "走进西关",
+          "在广州，有些老房子不必开口，便足以讲述一段城市往事。走进荔湾的老街，青砖为墙、麻石为基，门前横着一道道圆木栅栏，门后则藏着一进又一进的厅堂。这便是西关大屋。它没有宫殿的恢宏，却在砖瓦、门窗与天井之间，藏着旧时广州人的生活智慧。"
+        ],
+        [
+          "西关繁华处，何以起大屋？",
+          "广州自古与水路贸易联系深厚。清代中后期，随着商贸活动发展，城西的西关一带逐渐成为商贾、富户聚居之地。富裕家庭兴建宽敞精致的住宅，既要满足大家庭的生活，又希望表达家族身份与审美。传统西关大屋常沿纵深方向展开，厅堂依次排列，两侧安排生活空间。由街入屋，仿佛从喧闹的商业世界走进家族生活。"
+        ],
+        [
+          "三重门：关得住门户，关不住清风",
+          "西关大屋的正门常有俗称“三件头”的门组：矮脚门、趟栊门与厚实的大木门。矮脚门形成街道与住家的第一道界限；趟栊门以可以横向推拉的木栅栏兼顾阻隔与通风；坚实木门则在需要时保障安全与私密。广州夏季漫长、气候炎热湿润，三层不同的门让住户无需在完全敞开与彻底封闭之间二选一。门可以关，风却不必完全停下来。"
+        ],
+        [
+          "一方天井，容得下岭南的风与光",
+          "传统大屋进深较长，深处厅堂若只靠外墙开窗，容易昏暗闷热。于是人们在厅堂之间设置天井，把日光引入室内，并与其他开口共同形成空气流动的路径。两侧的青云巷服务于通行，也与空间通风和防火安排相关。建筑并非要与自然隔绝，而是要理解和回应岭南多雨湿热的环境。"
+        ],
+        [
+          "满洲窗：把色彩装进岭南人家",
+          "木雕、花罩、屏风与彩色玻璃窗，为传统大屋带来细腻的装饰。满洲窗常以木框与彩色玻璃组合，让阳光在室内投下丰富的色彩。广州长期与外部世界保持商贸与文化交流；外来的材料和装饰技法与本地木作和审美结合，形成具有地域特色的建筑语言。斑斓光影也是广州开放交流历史的一种线索。"
+        ],
+        [
+          "厅堂深处，家族生活有其秩序",
+          "传统大屋中的厅堂、书房、卧室等空间各有用途。待客、家庭活动与私人起居在空间上形成层次，部分格局也反映传统家庭对礼仪和长幼关系的重视。一座房子的平面安排，既能说明如何住得舒适，也能让我们看见一个时代的人际关系。"
+        ],
+        [
+          "大屋渐远，西关仍在",
+          "今天广州的居住方式已经改变，不少传统大屋也历经修缮与更新。老建筑的价值，不仅在于年代或材料，更在于让我们重新理解曾经真实存在的生活方式。透过趟栊门，看到开放与私密的平衡；仰望天井，理解对气候的回应；驻足满洲窗前，看见文化交流的创造。下一次走过西关老街，不妨放慢脚步：一门之内，是西关旧事；一门之外，是广州新生。"
+        ]
+      ]
+    },
+    "en": {
+      "title": "Why Does a Traditional Cantonese House Have Three Doors?",
+      "subtitle": "Lingnan Explained · Episode 01",
+      "sections": [
+        [
+          "A curious doorway",
+          "Imagine walking through an old neighborhood in Guangzhou. You turn into a narrow street and notice a tall grey-brick house with a wooden gate. Look closer: there is not just one door, but several layers. Why would a family need three doors? The answer takes us into the world of the Xiguan Mansion, a traditional Cantonese home shaped by climate, family life and trade."
+        ],
+        [
+          "What is a Xiguan Mansion?",
+          "Xiguan is a historic area in western Guangzhou, associated with today’s Liwan District. As trade expanded, prosperous merchant families built substantial homes here. These houses were more than expensive residences. Their long, deep layouts reflected how families received guests, organized everyday life and adapted to humid summer weather."
+        ],
+        [
+          "Three doors, three different jobs",
+          "Think about your own front door. When it is open, air and people can move through; when it is shut, you have privacy. But what if you want fresh air without leaving your home entirely exposed? Traditional entrances often combined low folding doors (矮脚门), a sliding wooden-bar gate called a tanglong (趟栊门), and a heavy solid door. The different layers gave residents more control over airflow, access and privacy. A barred gate might look like a fence, but in this climate it served a practical purpose."
+        ],
+        [
+          "A house designed to breathe",
+          "Walk farther inside and you may find a tianjing (天井), a small open light well between halls. Deep rooms could otherwise be dark and poorly ventilated. These openings brought daylight and helped air move through the interior. Narrow side lanes, sometimes called Qingyun lanes, were also part of the spatial layout. You might think of courtyard homes in other warm parts of the world. The comparison is helpful, but the designs are not identical: Xiguan houses belong to a specific Cantonese tradition."
+        ],
+        [
+          "A map of family life",
+          "The building was not designed only to keep people comfortable. Reception halls, family rooms and private living spaces often had different roles. The sequence of rooms can reveal how households balanced hospitality, family relationships and privacy. A floor plan can also be a map of social life."
+        ],
+        [
+          "Colorful windows, a history of exchange",
+          "Some traditional homes feature Manzhou windows (满洲窗), with wooden frames and colored glass. Sunlight passing through them brings shifting color into the rooms. These details can also prompt a bigger question: how did local crafts and outside influences meet in Guangzhou, a long-standing center of trade and cultural exchange?"
+        ],
+        [
+          "Look again when you visit",
+          "If you encounter a preserved Xiguan-style house, begin at the entrance. Can you identify different door layers? Look for a light well and notice how the rooms connect. Look for carved details and colored windows. Not all houses are open to visitors, and some have been altered or restored, so check access before visiting. You do not need to memorize every term. Ask one question: why did the people who lived here build it this way? Sometimes a doorway can tell you more about a culture than an entire guidebook."
+        ]
+      ]
+    }
+  }
+};
 
 /* ---------- 4. Cultural places (Liwan + Yuexiu) ----------
    Field order follows the product spec:
@@ -2828,6 +2940,31 @@ STORIES.push(
    ③ 同步 p1_head.html 底部署名里的版本号 ④ 更新根目录的 更新日志.md
    ================================================================== */
 const CHANGELOG = [
+  {v:"v3.5",date:"2026-11-07",items:{
+    zh:["修正使用指引第4项现场探索的陈家祠地点编号，四种语言均连接到现有点位 p13","补充四语言六个指引入口及现场探索问答、步骤完成、返回地点详情的回归检查"],
+    en:["Fixed the on-site guide link in all four languages to use the existing Chen Clan place ID p13","Added regression checks for all guide buttons and the complete on-site question, step and summary flow"]}},
+
+  {v:"v3.4",date:"2026-11-07",items:{
+    zh:["首页新增四语言使用指引，覆盖故事、地图、路线、现场探索、美食与收藏，并提供直接体验入口","修复手机地图手势与点位卡片、筛选栏横滑冲突，增加左右切换按钮","拖动后误触保护仅作用于地图，保留 v3.3 双语文化专栏"],
+    en:["Added a four-language Home guide with direct links to stories, map, routes, on-site exploration, food and profile","Separated map panning from native card and filter swipes; added previous/next controls","Scoped drag click suppression to the map; preserved the v3.3 bilingual editorial feature"]}},
+
+  {
+    v:"v3.3", date:"2026-11-07",
+    items:{
+      en:[
+        "Established the fixed v3.3 editorial content series: later article additions stay under v3.3",
+        "Added Episode 01 Xiguan Mansion: paired Chinese cultural feature and English Lingnan Explained deep dive",
+        "Connected the bilingual articles to the existing Xiguan Mansion place and culture story without duplicating map pins",
+        "Added an expandable mobile-friendly reading panel and reviewable source links; editorial material marked as draft"
+      ],
+      zh:[
+        "确立固定 v3.3 内容更新系列：今后新增文章沿用 v3.3，不逐篇升版",
+        "新增第01期西关大屋：中文文化科普与英文 Lingnan Explained 跨文化专题",
+        "双语专题关联现有西关大屋点位及文化故事，不重复创建地图点位",
+        "新增适配手机的折叠式长文阅读及参考来源链接，文章标记为待审校初稿"
+      ]
+    }
+  },
   {
     v:"v3.2", date:"2026-11-04",
     items:{
@@ -3198,7 +3335,6 @@ const CHANGELOG = [
     }
   },
 ];
-
 
 /* ==================================================================
    Part D · 食在广州（15 道广府菜）
@@ -5000,6 +5136,7 @@ const TEAM_PLACES = [
 
 // 合并进 PLACES（保留原有 13 个点位）
 TEAM_PLACES.forEach(p => { if (!PLACES.some(x => x.id === p.id)) PLACES.push(p); });
+
 /* ==================================================================
    p3f_geo.html — 真实地理数据（自动生成，勿手改）
    · 行政区边界：阿里云 DataV 公开行政区划 GeoJSON（荔湾 440103 / 越秀 440104）
@@ -5078,6 +5215,7 @@ const MAPGEO = {
     "p60":[224.2,129.4,23.12545,113.26166,"a"],
   }
 };
+
 /* ==================================================================
    p3g_questions.html — 蔡梦纯「今日发现」提问卡片（54 条，自动生成，勿手改）
    字段：en/zh（问句）+ aEn/aZh（答案）+ anaEn/anaZh（文化类比，含"类比在哪里不成立"）
@@ -5306,6 +5444,7 @@ const QUESTION_RULES = [
   {t:"真的会产生困惑或误会", d:"对方会以为看错了、或觉得不合常理，而不只是\"这是什么\"。"},
   {t:"背后有一个完整故事", d:"能讲出历史来源、成因分层或一套内在逻辑，不是要背的知识点。"},
 ];
+
 /* ==================================================================
    p3h_ja.html — 日本語版データ（v2 多语言）
    UI：UI_JA 覆盖全站界面文案；内容：把 obj.en 在 ja 模式下替换为日语
@@ -6589,7 +6728,7 @@ VIEWS.home = function(){
         esc(t("slogan").replace(/<[^>]+>/g, "")) + '</div>' +
     '</div>';
 
-  return { html: brand + greet + hero + storiesSec + craftsSec + placesSec + districtsSec + foodSec + foot,
+  return { html: brand + greet + guideEntryHTML() + hero + storiesSec + craftsSec + placesSec + districtsSec + foodSec + foot,
            mount: function(el){ setTimeout(function(){ observeReveals(el); }, 30); } };
 };
 
@@ -6733,6 +6872,58 @@ VIEWS.experiences = function(){
     });
   });
 })();
+
+/* v3.4 — onboarding copy follows the currently selected interface language. */
+const GUIDE_COPY = {
+  zh:{entry:"第一次来？从这里开始",sub:"读故事 · 找地点 · 走路线，看看怎么用",title:"译见岭南使用指引",intro:"先读懂一个习俗，再去街巷里找找它。下面几个入口，可以按你的兴趣随时开始。",swipe:"左右滑动下方卡片",tap:"点卡片查看地点，也可用两侧箭头",prev:"上一个地点",next:"下一个地点",cards:[
+    ["01 · 读懂文化","在首页或探索页点开故事。先看习俗的来由，再读跨文化类比与差异说明；西关大屋故事还可以展开中英专栏。","读一篇故事","culture","lion-dance"],
+    ["02 · 找想去的地方","打开地图，上方可搜索或按类别筛选。单指拖动底图，双指捏合缩放，也可点＋／−。点数字气泡放大密集点位；左右滑动底部卡片，点卡片或图钉看详情。⌖查看全部点位，⟲恢复全图。","打开地图","map"],
+    ["03 · 按路线慢慢逛","在探索页选择路线，查看沿途站点与参考时长。打开每站详情，完成后可手动标记已到访；路线进度在当前演示中记录。","看看第一条路线","route","first-time"],
+    ["04 · 到现场，留意细节","在地点详情点「我在这里」，按提示观察建筑、器物或习俗，点问题展开解释。此功能由你手动进入，不会自动判断你是否到场。","试试现场探索","onsite","p13"],
+    ["05 · 吃之前，先了解","进入「食在广州」，查看菜品介绍、点单提示和饮食文化。手艺体验页展示示例项目，费用与预约以实际机构信息为准。","看看广府美食","foods"],
+    ["06 · 换语言、留住感兴趣的内容","在「我的」切换中文、English、日本語或廣東話，也可选择文化背景。故事和地点详情右上角的书签可以收藏，再从「我的」查看。","打开我的","profile"]]},
+  en:{entry:"New here? Start with a quick guide",sub:"Read a story · Find a place · Follow a route",title:"Your guide to Interpret Lingnan",intro:"Start with a custom that interests you, then find it in the streets. Pick any of these ways to explore.",swipe:"Swipe the place cards left or right",tap:"Tap a card, or use the arrows to browse",prev:"Previous place",next:"Next place",cards:[
+    ["01 · Understand a custom","Open a story on Home or Explore. Read its background, then the cross-cultural comparison and its limits. The Xiguan Mansion story also includes an expandable Chinese / English feature.","Read a story","culture","lion-dance"],
+    ["02 · Find a place","Search or filter at the top of Map. Drag the map with one finger; pinch or use + / − to zoom. Tap a numbered cluster to zoom in. Swipe the bottom cards and tap a card or pin for details. ⌖ fits all places; ⟲ resets the map.","Open the map","map"],
+    ["03 · Follow a route","Choose a route in Explore to see its stops and estimated time. Open each stop for details and mark visits yourself. Progress is recorded within the current demo session.","Try a walking route","route","first-time"],
+    ["04 · Look closer on site","Tap “I'm here” on a place page for observation prompts. Tap each question to reveal its explanation. You enter this mode yourself; it does not confirm your physical location.","Try on-site exploration","onsite","p13"],
+    ["05 · Explore Cantonese food","Open Food in Guangzhou for dish introductions, ordering tips and food culture. Craft experiences are examples; check prices and booking details with the actual provider.","Explore the food","foods"],
+    ["06 · Choose a language and save","In My Lingnan, choose English, 中文, 日本語 or 廣東話 and a cultural background. Tap the bookmark on a story or place page, then find it in your saved list.","Open My Lingnan","profile"]]},
+  ja:{entry:"初めての方へ · 使い方ガイド",sub:"物語を読む · 場所を探す · ルートを歩く",title:"使い方ガイド",intro:"気になる習慣を知ってから、街へ。興味のある入口から始めてみましょう。",swipe:"下のカードを左右にスワイプ",tap:"カードをタップ、または矢印で切り替え",prev:"前の場所",next:"次の場所",cards:[
+    ["01 · 文化を知る","ホームや探索で物語を開き、背景と異文化との共通点・相違点を読みます。西関大屋では中国語・英語の特集も開けます。","物語を読む","culture","lion-dance"],
+    ["02 · 場所を探す","地図上部で検索・分類できます。1本指で地図を移動し、2本指か＋／−で拡大縮小。数字をタップすると密集した地点を拡大します。下のカードを左右に動かし、カードやピンから詳細へ。⌖は全地点、⟲は全体表示に戻します。","地図を開く","map"],
+    ["03 · ルートを歩く","探索でルートと所要時間を確認します。各地点の詳細を開き、訪問済みを手動で記録できます。進捗は今回のデモ内で記録されます。","ルートを見る","route","first-time"],
+    ["04 · 現地で観察する","場所の詳細で「ここにいる」を選び、観察のヒントを読みます。質問をタップすると解説が開きます。このモードは手動で入り、実際の現在地は判定しません。","現地探索を試す","onsite","p13"],
+    ["05 · 広州の食を楽しむ","料理紹介や注文のヒント、食文化を読めます。工芸体験はデモ例です。料金と予約は実際の施設に確認してください。","料理を見る","foods"],
+    ["06 · 言語とお気に入り","マイページで4言語と文化背景を選べます。物語や場所の右上のしおりをタップすると保存リストから見返せます。","マイページへ","profile"]]},
+  yue:{entry:"第一次嚟？由呢度開始",sub:"睇故事 · 搵地方 · 行路線，睇下點用",title:"譯見嶺南使用指引",intro:"先了解一個習俗，再去街巷搵下佢。你可以揀自己有興趣嘅入口開始。",swipe:"左右掃下面嘅地點卡片",tap:"撳卡片睇詳情，亦可以撳兩邊箭嘴",prev:"上一個地點",next:"下一個地點",cards:[
+    ["01 · 了解文化","喺首頁或者探索頁撳開故事，睇習俗由來，再睇跨文化類比同差異。西關大屋故事仲可以展開中英專欄。","睇一篇故事","culture","lion-dance"],
+    ["02 · 搵想去嘅地方","地圖上方可以搜尋同篩選。單指拖底圖，雙指或者＋／−縮放；撳數字氣泡放大密集點位。左右掃下面嘅卡片，撳卡片或圖釘睇詳情。⌖睇全部點位，⟲返回全圖。","打開地圖","map"],
+    ["03 · 跟路線慢慢行","喺探索頁揀路線，睇沿途站點同參考時間。每站可以打開詳情，去完再手動標記；進度會喺今次示範期間記錄。","睇下第一條路線","route","first-time"],
+    ["04 · 到現場，睇清細節","喺地點詳情撳「我在這裡」，跟提示觀察，撳問題睇解釋。呢個模式係手動進入，唔會自動判斷你有冇到場。","試下現場探索","onsite","p13"],
+    ["05 · 食之前，了解多啲","喺「食在廣州」睇菜式、落單提示同飲食文化。手藝體驗頁係示例，價錢同預約要向實際機構確認。","睇下廣府美食","foods"],
+    ["06 · 換語言、收藏內容","喺「我的」揀中文、English、日本語或廣東話，同埋文化背景。故事同地點右上角嘅書籤可以收藏，再喺「我的」搵返。","打開我的","profile"]]}
+};
+function guideText(key){ return (GUIDE_COPY[state.lang] || GUIDE_COPY.en)[key]; }
+function guideEntryHTML(){
+  return '<button class="guide-entry" data-act="push" data-view="guide"><span class="guide-icon" aria-hidden="true">?</span><span><b>' + esc(guideText('entry')) + '</b><small>' + esc(guideText('sub')) + '</small></span>' + IC.chev + '</button>';
+}
+VIEWS.guide = function(){
+  return {html:topbar(guideText('title'),{solid:true}) + '<div class="guide-intro"><div class="eyebrow">START HERE</div><p>'+esc(guideText('intro'))+'</p></div>' + guideText('cards').map(c=>{
+    const tab = ['map','profile'].includes(c[3]);
+    return '<section class="guide-card"><h2>'+esc(c[0])+'</h2><p>'+esc(c[1])+'</p><button class="btn line wide" data-act="'+(tab?'guidetab':'push')+'" '+(tab?'data-goto="'+c[3]+'"':'data-view="'+c[3]+'" data-id="'+(c[4]||'')+'"')+'>'+esc(c[2])+IC.arw+'</button></section>';
+  }).join('')+'<div style="height:24px"></div>'};
+};
+function mountPlaceStrip(host){
+  const strip=host.querySelector('.strip'); if(!strip) return;
+  let start=null, dragged=false, until=0;
+  strip.addEventListener('touchstart',e=>{start={x:e.touches[0].clientX,y:e.touches[0].clientY};dragged=false;},{passive:true});
+  strip.addEventListener('touchmove',e=>{if(start && Math.hypot(e.touches[0].clientX-start.x,e.touches[0].clientY-start.y)>8) dragged=true;},{passive:true});
+  strip.addEventListener('touchend',()=>{if(dragged) until=Date.now()+400;start=null;},{passive:true});
+  strip.addEventListener('touchcancel',()=>{start=null;dragged=false;until=0;},{passive:true});
+  strip.addEventListener('click',e=>{if(Date.now()<until){e.preventDefault();e.stopPropagation();}},true);
+}
+
 
 /* ==================================================================
    Part D: Map, Profile, Culture translation, Place, Route, On-site, B2B
@@ -6956,11 +7147,15 @@ function mapMount(host){
   wrap.dataset.mbound = "1";
   // 屏幕坐标 → 容器内 CSS 坐标
   const rel = t => { const r = wrap.getBoundingClientRect(); return {x:t.clientX-r.left, y:t.clientY-r.top}; };
-  let last = null, d0 = 0, m0 = null, k0 = 1, x0 = 0, y0 = 0, moved = false;
+  let last = null, d0 = 0, m0 = null, k0 = 1, x0 = 0, y0 = 0, moved = false, active = false, origin = null;
 
   // ---- 触摸：单指平移 / 双指捏合 ----
   wrap.addEventListener("touchstart", function(e){
+    active = !e.target.closest(".map-bottom,.map-overlay-top,.mapzoom,.legend,.legend-pill");
+    if(!active) return;
+    state.mapDragMoved = 0;
     moved = false;
+    origin = rel(e.touches[0]);
     if(e.touches.length === 1){
       last = rel(e.touches[0]);
     } else if(e.touches.length === 2){
@@ -6973,6 +7168,7 @@ function mapMount(host){
   }, {passive:true});
 
   wrap.addEventListener("touchmove", function(e){
+    if(!active) return;
     const m = mapScale();
     if(e.touches.length === 2 && m0){
       e.preventDefault();
@@ -6997,7 +7193,7 @@ function mapMount(host){
       if(z.k > 1.001){
         z.x += (p.x - last.x) / m.s;
         z.y += (p.y - last.y) / m.s;
-        if(Math.abs(p.x - last.x) + Math.abs(p.y - last.y) > 1) moved = true;
+        if(origin && Math.hypot(p.x-origin.x,p.y-origin.y)>8) moved = true;
         mapClamp(); mapApply();
       }
       last = p;
@@ -7006,10 +7202,12 @@ function mapMount(host){
 
   wrap.addEventListener("touchend", function(e){
     if(e.touches.length === 0){
-      if(moved) state.mapDragMoved = true;
-      last = null; m0 = null;
+      if(active && moved) state.mapDragMoved = Date.now()+450;
+      last = null; m0 = null; active = false;
     }
   }, {passive:true});
+
+  wrap.addEventListener("touchcancel", function(){ active=false; last=null; m0=null; }, {passive:true});
 
   // ---- 鼠标拖动平移 ----
   wrap.addEventListener("mousedown", function(e){
@@ -7031,7 +7229,7 @@ function mapMount(host){
     const up = function(){
       document.removeEventListener("mousemove", mv);
       document.removeEventListener("mouseup", up);
-      if(drag) state.mapDragMoved = true;
+      if(drag) state.mapDragMoved = Date.now()+450;
     };
     document.addEventListener("mousemove", mv);
     document.addEventListener("mouseup", up);
@@ -7039,6 +7237,7 @@ function mapMount(host){
 
   // ---- 滚轮缩放 ----
   wrap.addEventListener("wheel", function(e){
+    if(!e.target.closest(".mapsvg")) return;
     e.preventDefault();
     const p = rel(e);
     mapZoomAt(p.x, p.y, e.deltaY < 0 ? 1.22 : 1 / 1.22);
@@ -7046,7 +7245,7 @@ function mapMount(host){
 
   // ---- 双击放大 / 缩小 ----
   wrap.addEventListener("dblclick", function(e){
-    if(e.target.closest(".mapzoom")) return;
+    if(!e.target.closest(".mapsvg")) return;
     const p = rel(e);
     const z = mapState();
     mapZoomAt(p.x, p.y, z.k < 8 ? 2.2 : 0.35);
@@ -7106,7 +7305,8 @@ VIEWS.map = function(){
         : '<button class="legend-pill" data-act="legend">' + IC.info + ' ' + t("legMap") + '</button>') +
       '<div class="map-bottom">' +
         '<div class="lab"><span class="t">' + (state.mapCat === "all" ? t("nearest") : t("cat_" + state.mapCat)) + '</span>' +
-        '<span class="h">' + t("tapMarker") + '</span></div>' +
+        '<span class="h">' + esc(guideText("swipe")) + '</span></div>' +
+        '<div class="strip-controls"><button data-act="stripstep" data-dir="prev" aria-label="' + esc(guideText("prev")) + '">‹</button><span>' + esc(guideText("tap")) + '</span><button data-act="stripstep" data-dir="next" aria-label="' + esc(guideText("next")) + '">›</button></div>' +
         '<div class="strip">' + list.map(p => {
           const d = mapDist(p);
           return '<button class="mini" data-act="marker" data-id="' + p.id + '">' + artHTML(p.art, p.hue, "") +
@@ -7116,7 +7316,7 @@ VIEWS.map = function(){
         }).join("") + '</div>' +
       '</div>' +
     '</div>';
-  return { html:html };
+  return { html:html, mount:mountPlaceStrip };
 };
 function placeSheet(p){
   const dist = mapDist(p);
@@ -7152,6 +7352,28 @@ function placeSheet(p){
         '<button class="btn ghost" style="flex:1" data-act="push" data-view="place" data-id="' + p.id + '">' + t("viewDetails") + '</button>' +
       '</div>' +
     '</div>';
+}
+
+
+/* v3.3 · Reusable bilingual editorial module; the topic key matches an existing place/story ID. */
+function editorialHTML(topicId){
+  const record = EDITORIAL_ARTICLES[topicId];
+  if (!record) return '';
+  const zh = state.lang === 'zh' || state.lang === 'yue';
+  const article = zh ? record.zh : record.en;
+  const sectionTitle = zh ? '专题深读 · 中文文化科普' : 'Lingnan Explained · Cultural Deep Dive';
+  const status = zh ? '内容初稿 · 待团队审校' : 'Editorial draft · pending team review';
+  return '<section class="block editorial-article" id="editorial-' + esc(topicId) + '">' +
+    '<div class="block-head"><span class="bt">' + sectionTitle + '</span></div>' +
+    '<details class="editorial-expand"><summary><span style="display:block;font-weight:750;font-size:16px;line-height:1.4">' + esc(article.title) + '</span>' +
+    '<span class="tiny" style="display:block;margin-top:5px">' + esc(article.subtitle) + ' · ' + (zh ? '点击展开阅读全文' : 'Tap to read the full article') + '</span></summary>' +
+    '<div style="padding:15px 16px 6px">' + article.sections.map(sec =>
+      '<h3 style="font-size:16px;line-height:1.5;margin:16px 0 8px;font-family:var(--serif)">' + esc(sec[0]) + '</h3>' +
+      '<p class="body" style="line-height:1.85;white-space:normal;margin:0 0 12px">' + esc(sec[1]) + '</p>').join('') +
+      '<div class="tiny" style="margin:18px 0 12px;padding-top:12px;border-top:1px solid var(--line)">' + status + ' · ' + record.id + '</div>' +
+      '<div class="tiny" style="font-weight:700;margin:10px 0">' + (zh ? '参考资料（请在正式发布前复核）' : 'Sources (review before publication)') + '</div>' +
+      record.sources.map(src => '<p class="tiny" style="margin:7px 0"><a href="' + esc(src.url) + '" target="_blank" rel="noopener noreferrer" style="color:var(--brand);text-decoration:underline">' + esc(src.name) + '</a></p>').join('') +
+    '</div></details></section>';
 }
 
 /* ==================================================================
@@ -7220,6 +7442,8 @@ VIEWS.culture = function(p){
         '<div class="tiny" style="margin-top:9px">' + t("picksNote") + '</div>' : "") +
         '<button class="btn line wide" style="margin-top:14px" data-act="mapfocus" data-id="' + (stories[0] ? stories[0].id : "") + '">' + IC.pin + ' ' + t("byDistrict") + ': ' + esc(L(D(s.district))) + '</button>' +
       '</div>' +
+      editorialHTML(s.id) +
+
       '<div class="tiny" style="margin-top:22px;padding-top:14px;border-top:1px solid var(--line)">' +
         esc((state.lang === "zh" || state.lang === "yue") ? "内容：项目内容团队撰写，英文经母语编辑审校。术语遵循已锁定术语库。" : jaT("Content drafted by the project content team; English reviewed by a native editor. Terminology follows our locked glossary.")) + '</div>' +
     '</div><div style="height:34px"></div>';
@@ -7287,6 +7511,8 @@ VIEWS.place = function(p){
             artHTML(x.art, x.hue, "", { style:"width:56px;height:56px;border-radius:12px;flex:0 0 auto" }) +
             '<div class="rc"><div class="rt">' + esc((state.lang === "zh" || state.lang === "yue") ? x.zh : x.en) + '</div>' +
             '<div class="rs">' + esc(L(x.hook)) + '</div></div><span class="linkmore">' + IC.arw + '</span></button>').join("") + '</div></div>' +
+
+      editorialHTML(pl.id) +
 
       '<div class="block"><div class="block-head"><span class="bnum">8</span><span class="bt">' + t("arrival") + '</span></div>' +
         '<div class="analogy"><div class="ah">' + IC.walk + ' ' + t("nextStop") + '</div><p class="body" style="margin:9px 0 0">' + esc(L(pl.next)) + '</p></div>' +
@@ -7758,12 +7984,21 @@ VIEWS.qcard = function(p){
 
 document.addEventListener("click", function(e){
   // 刚拖动/捏合过地图，不要把它当成"点了某个点位"
-  if(state.mapDragMoved){ state.mapDragMoved = false; e.preventDefault(); e.stopPropagation(); return; }
+  if(state.mapDragMoved && e.target.closest(".mapsvg")){
+    const suppress = state.mapDragMoved === true || Date.now() < state.mapDragMoved;
+    state.mapDragMoved = 0;
+    if(suppress){ e.preventDefault(); e.stopPropagation(); return; }
+  }
   const trg = e.target.closest ? e.target.closest("[data-act]") : null;
   if (e.target.closest && e.target.closest("[data-close]")) { closeSheet(); return; }
   if (e.target.id === "scrim") { closeSheet(); closeModal(); return; }
   if (!trg) return;
   const act = trg.dataset.act, id = trg.dataset.id;
+  if (act === "guidetab") { popAll(); switchTab(trg.dataset.goto); return; }
+  if (act === "stripstep") {
+    const strip = trg.closest(".map-bottom").querySelector(".strip");
+    strip.scrollBy({left:(trg.dataset.dir === "next" ? 1 : -1)*223,behavior:"smooth"}); return;
+  }
   if (act === "tab") { switchTab(trg.dataset.tab); return; }
   if (act === "back") { pop(); return; }
   if (act === "push") { const params = { id:id }; if (trg.dataset.replace) { replaceTop(trg.dataset.view, params); } else { push(trg.dataset.view, params); } return; }
@@ -7947,6 +8182,7 @@ function boot(){
   $$(".layer").forEach(observeScroll);
 }
 boot();
+
 </script>
 </body>
 </html>
